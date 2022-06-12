@@ -1,0 +1,52 @@
+\documentclass[border=2mm]{standalone}
+\setlength{\textwidth}{12.2cm}
+\setlength{\textheight}{19.3cm}
+\usepackage{pgfplots}
+\usepgfplotslibrary{statistics}
+\pgfplotsset{compat=1.8}
+
+\begin{document}
+\begin{tikzpicture}
+    \pgfplotstableread{../../data/external_files.dat}\externalFilesDF
+    \pgfplotstableread{../../data/dependency_injection.dat}\depInjDF
+    \pgfplotstableread{../../data/ekstazi_instrumentation.dat}\runtimeInstrEkstaziDF
+    \pgfplotstableread{../../data/clover_instrumentation.dat}\runtimeInstrCloverDF
+    \pgfplotstableread{../../data/reflections_access.dat}\reflectionsAccessDF
+    \pgfplotstableread{../../data/reflections_changes.dat}\reflectionsChangesDF
+    \begin{axis}[
+            boxplot/draw direction=y,
+            ylabel={Number of indentified sources of unsafety per repository},
+            height=8cm,
+            ymin=0,ymax=75,
+            ytick={0,10,...,75},
+            color={black},
+            boxplot={
+                    draw position={0.5 + \plotnumofactualtype},
+                    box extend=0.3
+                },
+            x=\textwidth/7,xmin=0,xmax=6,
+            xtick={0,1,2,...,6},
+            x tick label as interval,
+            xticklabels={
+                    \footnotesize{External Files},
+                    \footnotesize{Dependency Injection},
+                    \footnotesize{\emph{Ekstazi} Instrumentation},
+                    \footnotesize{\emph{OpenClover} Instrumentation},
+                    \footnotesize{Reflective Access},
+                    \footnotesize{Reflective Changes}
+                },
+            x tick label style={
+                    text width=\textwidth/8,
+                    align=center
+                },
+        ]
+
+        \addplot+[boxplot, mark=+, draw=black] table[y=values]{\externalFilesDF};
+        \addplot+[boxplot, mark=+, draw=black] table[y=values]{\depInjDF};
+        \addplot+[boxplot, mark=+, draw=black] table[y=values]{\runtimeInstrEkstaziDF};
+        \addplot+[boxplot, mark=+, draw=black] table[y=values]{\runtimeInstrCloverDF};
+        \addplot+[boxplot, mark=+, draw=black] table[y=values]{\reflectionsAccessDF};
+        \addplot+[boxplot, mark=+, draw=black] table[y=values]{\reflectionsChangesDF};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

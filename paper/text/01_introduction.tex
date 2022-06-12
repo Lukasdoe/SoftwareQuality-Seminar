@@ -1,0 +1,100 @@
+\section{Introduction}\label{sec:intro}
+
+% What points should be in here?
+% - Why should we care about Regression tests?
+%   -> Regressions errors -> Open source -> Evolution
+% - What is RTS and why is it required / important
+%   -> less testing time -> more frequent testing possible and more immanent feedback for commiters
+%   -> less ressources required for testing -> money
+% - Approaches to reduce RT-Cost:
+%     * Selection -> for multiple runs
+%     * Reduction -> reducing test suits by eliminating redundant tests
+%     * Prioritization -> Sorting test cases by probability of uncovering faults 
+
+With agile and iterative software development processes, 
+project owners need to ensure that every new revision of their program's source code still
+complies with the project's specification. They need to make sure that no new bugs were
+introduced. Ensuring the project's ongoing compliance is
+increasingly complicated due to large, distributed code bases, the involvement of multiple developers and 
+complex program
+structures. Regression testing is widely used to detect such regression faults by
+re-running existing tests to ensure that the 
+new code changes have no negative impact on the code base.\cite{rt_in_agile,rt_iterative}
+
+Executing all tests from a project's regression test suite is a time consuming task that also goes
+with an economical cost. Even for companies with enormous computing resources, rerunning all
+regression tests does not scale well. Google's \ac{tap} deals with an average program delivery frequency of one commit per
+second, resulting in 150 million test runs a day~\cite{7965447}.
+
+% This increase in maintenance is also the main 
+% factors keeping
+% project owners from utilizing automated testing in their projects.\cite{10.1155/2010/620836}
+Regression Test Minimization, Regression Test Prioritization and \acf{rts} are the three major approaches
+identified by Yoo and Harman (2012) to reduce the computational cost of regression testing~\cite{regression_testing_reduction}. 
+
+% Short introduction to RTS, more than just the naming of the word
+\ac{rts} aims to reduce the amount of
+unnecessarily executed tests, i.e.~it excludes tests from the test suite whose outcome should not be
+affected by the changes. This selection process is based on information about changes in the
+program files and source code dependencies of tests cases. Only tests running changed code paths
+are selected for execution. Other test cases should not change their behavior with the new code base.
+
+\ac{rts}-tools exist in many variations. Though, one common goal of all examined tools is to be \emph{safe}.
+% The test case dependency information can either be
+% collected by \emph{statically} analyzing the program's source
+% code or by executing the tests and \emph{dynamically} collecting coverage information. This
+% information can be collected in different resolutions: Depending on the
+% implementation, the test dependencies are collected per module or package, per file, class or method
+% or in even smaller logical blocks, at a basic block or statement-level resolution~\cite{rts_techniques}.
+An \ac{rts} system which does not exclude tests that can be affected by the applied changes is called
+\emph{safe}~\cite{safe_definition}. Any undetected changes to dependencies of tests makes the \ac{rts}-tool \emph{unsafe},
+as they open the possibility for regression faults to be overlooked by not running the corresponding
+test cases~\cite{rts_techniques}.
+
+Safety is hard to proof. Although many \ac{rts}-tools claim to be safe in most cases, this safety is
+often only shown in experimental
+evidence~\cite{unsafety_eval,gibstazi_paper} or in comparison to other \ac{rts}-tools~\cite{prestarts,starts_paper,gibstazi_paper}. Unsafety can be caused by methodological
+limitations, errors in the implementation of the tool or outdated \ac{rts} software that is no
+longer compatible with up-to-date library or language versions.\cite{unsafety_eval} Even if the \ac{rts}-tool's
+methodology and implementation is proven to be safe in theory, unsafety can still occur through
+third party language extensions such as the Spring Framework. 
+
+With this seminar paper, we provide further insights into the unsafety of the following
+open source \ac{rts}-tools for the Java programming language: The dynamic tools
+\emph{Ekstazi}~\cite{ekstazimain,ekstazi_tool}, \emph{GIBstazi}~\cite{gibstazi_paper,gibstazi_tool},
+\emph{OpenClover}~\cite{openclover_tool} and \emph{HyRTS}~\cite{hyrts_paper,hyrts_tool}, and
+the static tool \emph{STARTS}~\cite{starts_paper,starts_tool}.
+
+The last years show a shift in the open source software community away from the examined
+\ac{rts}-tools, leading to an abandonment of their code bases. 
+Even the often showcased~\cite{hyrts_paper,ekstazispec,ekstazimain} 
+projects Apache CXF~\cite{cxf}, Commons Math~\cite{commonsmath}
+and Camel~\cite{camel} stop integrating \emph{Ekstazi} into their testing process.\footnote{The
+plugin was removed from Apache Camel with commit eb60743f22c2. Apache CXF and Commons Math do not
+document a process that involves Ekstazi and did not update the plugin since its introduction in 2014.}
+
+We show the potential and problems of the examined \ac{rts}-tools to help project owners
+mitigate the risks and advantages of using \ac{rts} in their quality control procedures.
+% In the first part of the study, we take a closer look at the
+% examined \ac{rts}-tools in order to discover previously undocumented or unknown sources of unsafety.
+% We searched for anomalies in the tools' source codes and problems originating from their general
+% methodology. The resulting sources of unsafe behavior where then combined with already documented
+% cases of unsafety and converted to model projects, showcasing them in a reproducible manner.
+% For the second part of the research, we performed a large scale automated search on the source code of
+% the most popular open source Java projects on GitHub. 
+% With the data gathered from the laboratory
+% evaluation of the \ac{rts}-tools, we declared a set of filters that were used for automatically
+% identifying a subset of the discovered sources of unsafety.
+
+We were able to identify 10 hypothetical scenarios that provoke unsafe behavior of at least one of the
+examined \ac{rts}-tools. They include problems with reflections, dependency injection frameworks,
+runtime instrumentation and external files. These scenarios were not just explained and executed in laboratory
+conditions, but were also examined in the last 100 commits of a selection of 100 of the most popular open source GitHub
+repositories. 
+
+% - What do all RTS systems have in common? How do they work in general?
+% - Short comparison of the evaluated systems and general approaches: 
+%   -> static vs dynamic approaches
+%   -> Granularity: File-Level vs. Class-Level vs. Module-Level vs. Method-Level vs. Basic-Block-Level
+%   -> Online vs. Offline Modes -> Phases of RTS tools -> AE vs AEC
+% - What is "safety" in terms of RTS tools? (most of tools refer to ekstazi as being the standard for "safe")

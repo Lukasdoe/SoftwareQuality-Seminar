@@ -1,0 +1,135 @@
+% This is main.tex, a sample paper demonstrating the use of the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.20 of 2017/10/04
+% 
+\documentclass[runningheads]{llncs}
+%
+% ---- Packages ----
+%
+\usepackage{graphicx} % enhanced support for graphics
+\usepackage[obeyspaces]{xurl} % add macros for handling URLs in text
+\usepackage[nohyperlinks,nolist]{acronym} % abbreviation utilities
+\usepackage{listings}
+\usepackage{float}
+\usepackage{ntheorem}
+\usepackage{amssymb}
+\usepackage{footmisc}
+\usepackage{footnote}
+\usepackage{fourier}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage[pdfusetitle]{hyperref}
+
+\usepackage[
+    type={CC},
+    modifier={by},
+    version={4.0},
+]{doclicense}
+
+\renewcommand{\texttt}[1]{{\renewcommand\UrlFont{\ttfamily}\nolinkurl{#1}}}
+
+% \theoremseparator{:}
+% \theorempreskip{1em}
+\newtheorem{hypothesis}{Hypothesis}
+\renewcommand{\thehypothesis}{H\arabic{hypothesis}}
+
+\setlength{\tabcolsep}{3pt}
+\setlength{\textfloatsep}{0.1cm}
+
+% From https://tex.stackexchange.com/questions/192994/writing-roman-numbers-in-equation
+\newcommand{\RN}[1]{%
+  $\textup{\uppercase\expandafter{\romannumeral#1}}$%
+}
+
+\captionsetup[table]{skip=10pt}
+
+% TODO: add more packages below if necessary
+%
+% ---- Acronyms ----
+%
+\begin{acronym}
+\acro{rq}[RQ]{Research Question}
+\acro{rts}[RTS]{Regression Test Selection}
+\acro{tap}[TAP]{Test Automation Platform}
+\acro{poc}[PoC]{Proof of Concept}
+\acro{di}[DI]{Dependency Injection}
+\end{acronym}
+
+% 
+% ---- Begin Document ----
+%
+\begin{document}
+%
+\title{The Unsafety in Java Regression Test Selection and its Occurrence in the Wild}
+%
+\titlerunning{The Unsafety in Java RTS and Its Occurrence in the Wild}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+% ---- Author Information ----
+%
+\author{Lukas Döllerer}
+\institute{Seminar: Software Quality\\
+  Technical University of Munich\\
+  \email{lukas.doellerer@tum.de}}
+%
+\maketitle % typeset the header of the contribution
+%
+% ---- Abstract ----
+%
+\begin{abstract}
+  Regression testing is used by developers to ensure that new
+  revisions of a program do not negatively impact existing features.
+  \ac{rts} excludes test cases from the regression test set. An \ac{rts}-tool that correctly
+  selects all tests affected by introduced changes is
+  called \emph{safe}. Prior research has shown that this safety is hard to achieve.
+  Undetected unsafety can be caused by a faulty implementation or imperfect
+  methodology of an \ac{rts}-tool. In this study, we collected known and discovered new unsafety
+  in the popular open source \ac{rts}-tools \emph{Ekstazi}, \emph{GIBstazi}, \emph{OpenClover}, \emph{STARTS} and \emph{HyRTS}.
+  We compared the tools with each other, based on reference projects that simulate sources of unsafety.
+  To confirm the relevance of the discovered unsafety, we performed a broad analysis of its occurrence on a
+  selection of the 100 most popular Java
+  repositories on the GitHub platform. We were able to document 10 hypothetical scenarios that cause unsafe
+  behavior of the examined \ac{rts}-tools. These scenarios include reflections, dependency injection, problems with runtime instrumentation
+  and external files. All examined tools acted unsafe. Sources of unsafety were
+  found in 88 out of the 100 scanned repositories. This leads us to the conclusion that none of the
+  examined tools are currently ready to be safely used in production environments. Further research must combine
+  existing knowledge and tools to develop and maintain an up-to-date implementation of \ac{rts} for Java.
+  \keywords{Regression Test Selection \and Unsafety \and Java}
+\end{abstract}
+%
+% ---- Text Parts ----
+%
+\input{text/01_introduction}
+\input{text/02_related_work}
+\input{text/03_approach}
+\input{text/04_evaluation}
+\input{text/05_discussion}
+\input{text/06_threats_to_validity}
+\input{text/98_conclusion}
+%
+% ---- Appendix ----
+%
+\appendix
+\input{text/99_appendix}
+%
+% ---- Bibliography ----
+%
+\clearpage
+\bibliographystyle{splncs04}
+\bibliography{library.bib}
+%
+\clearpage
+\vspace*{\fill}
+\doclicenseThis
+\end{document}
+
+
+% TODO:
+% - Tenses?
+% - we too much?
+% - Cite paper that evaluates starts, ekstazi and openclover and finds bugs in related work!
+% - comparison of the tools, where? 
+% - inline code
+% - hyrts implementation missing -> super hard to find stuff -> security by obscurity.
+% - Java 8 vs 1.8?

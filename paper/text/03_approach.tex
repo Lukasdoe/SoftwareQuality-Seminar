@@ -1,0 +1,489 @@
+\section{Methodology}
+% High level overview over the methodology, design
+% Step 1: identify sources of unsafety with poc-repos
+
+% Step 2: scan wild open source projects for these unsafeties
+% Which data did I test it on? -> Study Objects
+% \subsection{Study Objects}
+
+% \begin{itemize}
+% \item STARTS (Version 1.4-SNAPSHOT\footnote{This version was built from commit
+% e1d29be2958ec27fac12e6c8611577fce5a73e40 from the tool's GitHub repository~\cite{starts_tool},
+% because the newest version (edu.illinois:starts-maven-plugin:1.3) in the Maven Central Repository is
+% not functional.})
+% \item Ekstazi (Version 5.3.0)
+% \item HyRTS (Version 1.0.1)
+% \item GIBstazi (Version 3.5.7)
+% \item OpenClover (Version 4.4.1)
+% \end{itemize}
+
+The examined study objects shown in Table~\ref{table:rts-tools} each represent a different approach
+to \ac{rts}. \emph{Ekstazi} registers test case dependencies on a file-level while \emph{GIBstazi} and HyRTS
+use hybrid approaches, on a module-/file-level and file-/method-level granularity. \emph{OpenClover}
+performs intrusive, static code instrumentation by altering the program's source code~\cite{clover_documentation,java_instrumentation}. The
+other dynamic \ac{rts}-tools perform dynamic bytecode instrumentation with an agent that intercepts
+and changes bytecode during the class loading process~\cite{hyrts_paper,ekstazimain,java_instrumentation}.
+
+\begin{savenotes}
+    \begin{table}[H]
+        \caption{\textbf{Study Objects:} Examined \ac{rts}-tools with their corresponding versions.}\label{table:rts-tools}
+        \centering
+        \begin{tabular}{l | c}
+            \hline
+            Name                                     & Version                                                  \\
+            \hline
+            \emph{STARTS}~\cite{starts_tool}         & 1.4-SNAPSHOT\footnote{This version was built from commit
+                e1d29be2958ec27fac12e6c8611577fce5a73e40 from the tool's GitHub repository~\cite{starts_tool},
+                because the newest version (edu.illinois:starts-maven-plugin:1.3) in the Maven Central Repository is
+            not functional.}                                                                                    \\
+            \emph{Ekstazi}~\cite{ekstazi_tool}       & 5.3.0                                                    \\
+            \emph{HyRTS}~\cite{hyrts_tool}           & 1.0.1                                                    \\
+            \emph{GIBstazi}~\cite{gibstazi_tool}     & 3.5.7                                                    \\
+            \emph{OpenClover}~\cite{openclover_tool} & 4.4.1                                                    \\
+            \hline
+        \end{tabular}
+    \end{table}
+\end{savenotes}
+
+% What makes an rts tool a good rts tool -> Evaluation criteria
+
+% Why am I doing this? -> Research Questions
+\subsection{\acp{rq}}
+The \acp{rq} for this seminar paper are the following:
+\begin{itemize}
+    \item \textbf{RQ1} What sources of unsafety exist for the examined \ac{rts}-tools?
+
+    \item \textbf{RQ2} What are the differences in safety of the examined tools, in the context of the previously
+          identified sources of unsafety?
+
+    \item \textbf{RQ3} How can potential for unsafety be automatically identified in code changes
+          without dynamic program analysis?
+
+    \item \textbf{RQ4} In which quantities do the identified sources of unsafety occur in real world software projects?
+\end{itemize}
+
+\subsection{Identification and Documentation of Sources of Unsafety}\label{ssec:pocs}
+
+\begin{definition}\label{def:unsafety}
+    A source of unsafety consists of a combination of an existing code base $S_0$ and changes
+    to the source code $C$. The application of the changes $C$ to $S_0$ leads to the new program revision
+    $S_1$. Every valid source of unsafety makes at least one of the examined
+    \ac{rts}-tools behave in an unsafe manner. This means that either test cases whose behavior is
+    affected by the changes $C$ are excluded or the tool interferes with the testing process in another
+    way that leads to unwanted deviations in the test results.\footnote{The definition of a source of
+        unsafety is based on the definition of safe \ac{rts} introduced by Rothermel and Harrold (1997)~\cite{safe_definition}.}
+\end{definition}
+
+We built model Java projects for all scenarios that could be sources of unsafety.\footnote{Our
+    supplementary material containing all model projects and experiment results can be found in~\cite{poc_github}.} We refer to
+these model projects as \ac{poc} repositories. They were combined as modules in a Java project,
+managed by the Apache Maven software management tool. This enabled us to define a set of Maven
+profiles that activate the \ac{rts}-tools on a top level, reducing the configuration overhead for each
+submodule.
+
+All \ac{poc} repositories are executed and built using the Java Standard Edition (SE) Development
+Kit (JDK) version 8u291\footnote{The Java SE is used by about 70\% of all Java projects, with 79\%
+    of them using Version 8.}. The examined tools either support this version or do not specify a
+supported JDK version. Besides Maven (version 3.8.3), we used the JUnit unit testing framework in
+version 4.12 for the dependency injection tests and in version 4.10 for all other tests. \emph{Ekstazi} and
+\emph{OpenClover} were combined with the Maven Surefire Plugin (version 3.0.0-M5) as
+instructed by their documentations.
+
+The following subsections each describe potential sources of unsafety. The supplied implementation
+details describe the main structure of the \ac{poc} repositories that were used to test
+the corresponding hypotheses.
+
+\subsection{Dynamic Dispatch as a Source of Unsafety}
+
+The Java language's polymorphic type system allows the Java runtime to select a more specific
+implementation of a called method, if this implementation is available. This behavior was already
+identified to cause unsafety of the \emph{OpenClover} tool, but was not evaluated on all examined \ac{rts}-tools~\cite{unsafety_eval}.
+
+\begin{hypothesis}\label{hyp:dyn_dis}
+    Changes that lead to a different dynamic dispatch are not recognized as dependency
+    changes. This means that changes to an object's implementation are undetected, as long as the static type of
+    the variable storing the object is of a less specific superclass.
+\end{hypothesis}
+
+\subsubsection{Implementation \arabic{hypothesis}}
+We created a \ac{poc} repository containing two classes. Class $A$ that implements a method $m$ and
+class $B$ that inherits from $A$ and does not implement the method $m$. A test case $t$ initializes
+a variable $b$ of type $A$ with an instance of the class $B$. The test compares the return value of $b.m$
+with the expected return value of $A.m$. They are equal because $B$ does not implement $m$ and thus
+no dynamic dispatch was performed. The
+changeset $C$ adds the definition of a method $m$ to class $B$, overwriting the inherited version
+from class $A$. This new method returns a different return value than $A.m$.
+
+\subsection{External Files as Sources of Unsafety}\label{ssec:external_files}
+
+The examined \ac{rts}-tools concentrate on identifying code dependencies and perform test exclusion
+mostly based on source code changes. This however does not work with programs that have side effects and
+dependencies outside of their available source code. The examined tools \emph{GIBstazi} and \emph{Ekstazi} are,
+according to the their research papers, especially built for identifying such external file
+dependency changes~\cite{ekstazimain,gibstazi_paper}.
+
+\begin{hypothesis}\label{hyp:external_files}
+    Changing an external non-Java file is not correctly
+    detected as a change of test case dependencies.
+\end{hypothesis}
+
+\subsubsection{Implementation \arabic{hypothesis}}
+We chose to test external files that are in the standard directory
+for program code dependency files. This directory is specified by the Maven management tool to be
+\texttt{src/main/resources}, while the source code should be in \texttt{src/main/java}. A test case $t$, directly
+or indirectly, reads the contents of a plain text file at
+\texttt{src/main/resources/test.txt} using an \texttt{InputStream} from the Java standard io library
+(\texttt{java.io}). The changeset $C$ simply contains changes to the contents of the dependency text file.
+
+\subsection{Configuration Files as Sources of Unsafety}\label{ssec:config_files}
+Java projects typically use \texttt{.xml} or \texttt{.property} files to configure the behavior of libraries and additional
+tools. Famous examples are the \texttt{pom.xml}, \texttt{gradle.properties} or \texttt{build.xml} files that
+configure the most popular open source Java dependency management tools Maven, Gradle and Ant~\cite{project_management_tools_report}. We differentiate
+between external files and configuration files. The former are explicitly accessed through program
+code. The latter are used implicitly by external tools or libraries.
+
+\begin{hypothesis}\label{hyp:config_files}
+    Changes in library versions and other changes introduced through external configuration files are
+    not correctly recognized by the examined \ac{rts}-tools.
+\end{hypothesis}
+
+\subsubsection{Implementation \arabic{hypothesis}}
+We simulated the update of a library dependency to a new minor version. For this example, we updated
+the jackson JSON parsing library~\cite{jackson_json_lib} from version 2.11.4 to version 2.13.0. $S_0$ consists of
+a test case $t$ that converts an instance of a \texttt{Thread} class' class loader to a string and asserts
+the outcome. To transition to $S_1$, we only updated the library version and
+did not change the source code. The new library version had introduced changes in the object to string
+mapping and should therefore cause the test $t$ to fail. Though, the test case would not be executed by the
+\ac{rts}-tools, if~\ref{hyp:config_files} is true.
+
+\subsection{Reflections as Sources of Unsafety}
+
+Higher order class access through Java's meta class \texttt{Class} is often cited as a source of unsafety
+in regression test selection~\cite{ekstazimain,starts_paper,unsafety_eval,prestarts}. The STARTS
+\ac{rts}-tool's authors identify this reflective access as the only source of unsafety, when
+comparing their tool to \emph{Ekstazi}~\cite{starts_paper}. The \emph{HyRTS} tool is built, according to its
+authors, to overcome this weakness of static \ac{rts} by using a hybrid, dynamic
+approach~\cite{hyrts_paper}. Reflections are a powerful and commonly used technique. The factory pattern
+is an example of a common software engineering use case that often uses reflections.
+
+\begin{hypothesis}\label{hyp:reflections}
+    The examined \ac{rts}-tools do not recognize reflective instantiation of a class. They do not create
+    dependencies to objects that were created from their \texttt{Class} meta object, without explicitly importing
+    the class.
+\end{hypothesis}
+
+\subsubsection{Implementation \arabic{hypothesis}}
+We declared a class $A$ that is not imported to the test case $t$'s class file. Class $A$ declares a
+method $m$ which will later be tested. The test case $t$ acquires $A$'s meta class instance via
+\texttt{Class.forName("A")} and stores it in a variable $a$. Tests are executed on a new instance of
+$A$, created either via \texttt{a.newInstance()} (deprecated since Java
+9~\cite{java_9_class_api_docs}) or via $A$'s constructor
+(\texttt{a.getDeclaredConstructor().newInstance()}). In $S_1$ we changed the implementation of the
+class $A$ to fail test case $t$. The test should not be executed by the
+\ac{rts}-tool, though, if our hypothesis holds. It is important how we access the meta
+class object. Although we could also call \texttt{A.class}, this could create a solid
+dependency on class $A$, hiding any potential for unsafety.
+
+To display a common use case of these reflective accesses, we also implemented a simple factory
+pattern using reflections.
+
+\subsection{Static Initializers as Sources of Unsafety}
+
+Java classes support the declaration of static initialization blocks. These are code segments that are
+executed once on class initialization. This process is either triggered by direct class access or
+by certain reflective access methods~\cite[12.4.1]{java_8_spec}.
+
+\begin{hypothesis}\label{hyp:static_init}
+    \ac{rts}-tools do not monitor side effects that are caused by static
+    initializers on class initialization. Classes initialized without a direct call to a constructor or static method can alter the
+    program's behavior and test results without being detected.
+\end{hypothesis}
+
+\subsubsection{Implementation \arabic{hypothesis}}
+Class $A$ contains an uninitialized static public boolean field $A.b$. Class $B$ declares a static initialization
+block that contains code that sets $A.b$ to equal $true$. The test case $t$ triggers the initialization of $B$ using the
+reflective access \texttt{Class.forName("B")}. $t$ asserts that $A.b$ equals $true$. This is the
+base state $S_0$. For $S_1$, we changed the static initialization block in
+$B$ to set $A.b$ to equal $false$. If~\ref{hyp:static_init} is true, this change of the dependencies of test case $t$ is not
+recognized by the \ac{rts}-tool and $t$ is not executed.
+
+\subsection{Dependency Injection as a Source of Unsafety}
+
+Many professional Java projects utilize the technique of \ac{di}. To reduce coupling
+between components of a program, an injector inserts initialized instances of required dependencies
+into methods, constructors and fields. This programming pattern is one possible realization of
+``inversion of control''\cite{inversion_of_control_coiner}.~\cite{inversion_of_control_di}
+
+\ac{di} in Java is commonly used through third party open source libraries such as Spring, Google's Guice or
+CDI~\cite{java_cdi_jsr299} implementations. For the following study, we concentrate on the former two libraries, being the ones used in
+some of the repositories from the open source project selection, which is later introduced in
+Section~\ref{sec:foss_search}.
+
+% We expect \ac{di} to be a significant cause of unsafety because of the amount of control and logic
+% that is shifted from explicit declarations in the program's source to implicit behavior of external
+% libraries. This makes it one of the most important sources of unsafety, as dependency injection is
+% common among big projects with complicated dependency structures.
+
+Because of the strong static typing system of the Java programming language,
+parameters and attributes have to have a strict static type. Dependency injection libraries use Java
+interfaces to provide different implementation with equal signatures.
+
+Dependencies are injected based on a mapping of implementations of interfaces to dependency
+identifiers. This mapping is either explicitly defined in program code or in external \texttt{.xml}
+configuration files. The Spring \ac{di} framework also offers automatic component scanning,
+automatically searching for dependency implementations in specified class paths. Methods and fields
+that require injection are marked using Java annotations.
+
+\begin{hypothesis}\label{hyp:dep_inj:source}
+    Assume that the mapping of dependencies was explicitly defined in program code.
+    Changes to the source code of injected dependencies can then not be tracked reliably by the
+    examined \ac{rts}-tools.
+\end{hypothesis}
+
+\subsubsection{Implementation \arabic{hypothesis}}
+The implementation for the Spring framework is the same as described in
+Section~\ref{sssec:impl:class_path_scanning} with the difference that we do not introduce a new
+implementation for $D$ in class $C$, but we change the source code of the implementation defined in
+class $B$.
+
+For Guice dependency injection, no main application context is required, as dependencies are
+injected using an instance $i$ of the \texttt{Injector} class. This means that it is sufficient to annotate
+the dependency interface $D$ with the \texttt{@ImplementedBy(B.class)} annotation, referring to
+an implementation $B$ of the interface $D$. Because
+dependency implementations need to be injected into objects, we define a helper class $H$ that
+contains a Field of type $D$, annotated with the \texttt{@Inject} annotation. The test case $t$
+asserts the behavior of an instance of $H$, initialized using the \texttt{i.getInstance(H.class)}
+method. For $S_1$, we simply modify the source code of class $B$.
+
+\begin{hypothesis}\label{hyp:dep_inj:external}
+    Assume that the mapping of dependencies was declared
+    in an external configuration file.
+    Then, changes to the source code and changes of the dependency mapping are not
+    detected by the examined \ac{rts}-tools.
+\end{hypothesis}
+
+\subsubsection{Implementation  \arabic{hypothesis}}
+The hypothesis depends on the inability of the examined \ac{rts}-tools to detect changes of external
+files. A corresponding \ac{poc} repository was already implemented and described in
+Section~\ref{ssec:config_files} for hypothesis~\ref{hyp:config_files}.
+
+\begin{hypothesis}\label{hyp:dep_inj:collections}
+    The \ac{rts}-tools do not track changes of injected collections of dependencies.
+\end{hypothesis}
+
+Both \ac{di} libraries support automatic aggregation of multiple implementations of the same interface into a collection
+of implementations.
+
+\subsubsection{Implemenetation  \arabic{hypothesis}}
+Collection injection with the Spring framework can be achieved by choosing one of the approaches
+shown in Section~\ref{sssec:impl:class_path_scanning}. The type of the tested field $f$ is
+changed from \texttt{D} to \texttt{Collection<D>}. The Spring framework now injects a collection
+of all available implementations for the dependency $D$ into the field $f$. To transition to
+$S_1$, we perform the same actions as described in Section~\ref{sssec:impl:class_path_scanning}, but without annotating the new implementation with the
+\texttt{@Primary} annotation. The added implementation is automatically added to the injected
+collection, causing test case $t$ to fail. If the hypothesis holds, this dependency change is not
+detected by the \ac{rts} tools.
+
+The same principles apply to the implementation for the Guice library. Dependencies have to be
+explicitly bound to implementations, though. The Guice injector is configured from a subclass $A$ of
+type \texttt{AbstractModule}. A possibility to add objects for the collection injection
+is to create multiple provider methods, returning different implementations of the injected
+interface $D$. These methods have to be annotated with the \texttt{@ProvidesIntoSet} annotation. We only
+declare one such provider method for the base state $S_0$. To transition to
+$S_1$, we just add another provider method, adding a new implementation to the injected
+set.
+
+\begin{hypothesis}\label{hyp:dep_inj:scan}
+    Dependencies collected using class path scanning without an explicit mapping are not tracked as test
+    dependencies by the examined \ac{rts}-tools.
+\end{hypothesis}
+
+\subsubsection{Implementation \arabic{hypothesis}}\label{sssec:impl:class_path_scanning}
+Automated class path scanning is only available in the Spring framework~\cite[1.10]{spring_manual}\cite{guice_jit_bindings}.
+% The Guice library requires
+% additional extensions like Netflix Governator for automated dependency collection. However,
+% Governator deprecated its automatic dependency implementation scan feature, because of the risk of
+% unintended dependency instantiation~\cite{governator_wiki_auto_bind}.
+
+Class path scanning with Spring can be achieved in two ways. For the first \ac{poc} repository, we
+use implicit configuration scanning. Class $A$ in package $P$ is the main application class, the entrypoint of a
+Spring application. It is annotated with the \texttt{@EnableAutoConfiguration} annotation, which is
+also included in the commonly used \texttt{@SpringBootApplication} annotation. Package $P$ contains a configuration
+package $p$ with a configuration class $B$ that is annotated with the \texttt{@Configuration}
+annotation. The test class $T$ is annotated with \texttt{@RunWith(SpringRunner.class)} and
+\texttt{@SpringBootTest(classes = A.class)} annotations to enable dependency injection. Test case
+$t$ asserts the behavior of a field $f$. This field is annotated with the \texttt{@Autowired}
+annotation. Spring automatically injects the dependency $D$ whose implementation is defined in class $B$. To transition
+to $S_1$, we declare another configuration class $C$ in package $p$. This class defines an alternative
+implementation of $D$ and markes it with the \texttt{@Primary} annotation. This way, it is
+prioritized over other alternatives. This new implementation $C$ of $D$ should make $t$ fail on
+execution.
+
+Another option for class path scanning with Spring is to replace the \texttt{@EnableAutoConfiguration}
+annotation of class $A$ with a \texttt{@Configuration} and \texttt{@ComponentScan("P.p")}
+annotation. This avoids the overhead produced by a full Spring Boot application. The test class $T$ does not
+need any annotations any longer, because we use the \texttt{AnnotationConfigApplicationContext(A.class).getBean(d.class)}
+function in $t$ to retrieve implementations for dependencies. The transition to $S_1$
+stays the same, with the same expected test outcome.
+
+\subsection{Runtime Instrumentation as a Source of Unsafety}\label{ssec:runtime_instrumentation}
+
+The examined dynamic \ac{rts}-tools need to collect their dependency information during execution.
+They use different instrumentation mechanisms to capture call trees and resource accesses. \emph{Ekstazi} and
+\emph{HyRTS} both perform dynamic runtime instrumentation by augmenting java bytecode during class
+loading~\cite{ekstazimain,hyrts_paper,java_instrumentation}. \emph{OpenClover} on the other hand performs static runtime
+instrumentation by inserting additional instrumentation code into the java source files~\cite{clover_documentation,java_instrumentation}.
+
+\begin{hypothesis}\label{hyp:instrumentation}
+    Runtime instrumentation leads to differences in test results when executing the code with or without
+    the dynamic \ac{rts}-tools. Although this does not concern dependency collection, every undesired
+    deviation of test results is treated as unsafe behavior, according to the definition~\ref{def:unsafety}.
+\end{hypothesis}
+
+\subsubsection{Implementation \arabic{hypothesis}}
+To showcase the problems with runtime instrumentation, we combined already discovered problems of
+\emph{OpenClover}~\cite{unsafety_eval} with additional problems caused by its alterations to the compiled
+class files. We also found incompatibilities of the used \emph{Ekstazi} version with the new methods
+introduced in the \texttt{Class} meta class with Java 8. The problems are caused by a monitoring class
+that \emph{Ekstazi} injects during class loading for method calls on the \texttt{Class} meta class. We call the
+set of method calls that are affected $M_{CL}$
+(documented in table~\ref{table:runtime_instr_methods}). For testing the hypothesis on the identified
+methods, we create a test case for every method $m \in M_{CL}$.
+
+\subsection{Evaluation of Proof of Concept Repositories}
+
+The process of \ac{rts} depends on a set of changes of the program code. Therefore, we run every model
+project's tests
+twice. Once with the base state $S_0$ and once with the changed version $S_1$ to
+simulate creating a new revision. We started by running each \ac{poc} repository's tests before
+($S_0$) and
+after ($S_1$) the simulated changes were applied
+without any activated \ac{rts}-tools.
+This dry run yields two test reports that were later used to identify
+deviations from the expected outcome when testing with activated \ac{rts}-tools.
+
+Using the earlier mentioned Maven profiles, we executed both revisions' tests ($S_0$ and
+$S_1$) of every \ac{poc} repository with every \ac{rts}-tool. The test runs supplied all
+data required to filter out the valid sources of unsafe behavior. A repository implements such a valid source if at
+least one of the examined tools caused a test result that differs from the dry run
+result.\footnote{Apart from the difference caused by the test cases that were intended to be
+    excluded by the tools.}
+
+With the filtered \ac{poc} repositories, we had a solid overview of the most important cases
+that induce unsafe behavior of the examined \ac{rts}-tools. This however does not yet show the
+impact of this unsafety in practical software engineering projects as we could have identified purely
+hypothetical sources of unsafety that do not occur in everyday programs.
+
+\subsection{Search for Unsafety in Open Source Projects}\label{sec:foss_search}
+
+\subsubsection{Project Selection}
+
+In order to estimate the impact of the discovered sources of unsafety on real world software
+engineering, we performed a broad automated search over the most popular open source Java projects
+on GitHub. The base set of projects was acquired with the Python
+library PyGithub which uses the GitHub REST API as a data backend~\cite{pygithub}. The result was then further
+filtered.
+% to only contain software projects that are candidates for utilizing one of the examined
+% \ac{rts}-tools in the future.
+
+
+To be included in the final set of the 100 examined projects, a repository has to meet the following
+criteria:
+
+\begin{itemize}
+    \item Over 50\% of the repository's content has to be Java program code.
+    \item The last code changing activity was after or on the 06/01/2020.
+    \item The repository is not forked from another repository.
+    \item The repository has at least 100 stars\footnote{Stars are a measure of popularity on the GitHub
+              platform. Users can attribute stars to repositories to show their appreciation or to store
+              the project in their list of starred projects for later reference.}.
+    \item The repository contains a branch called ``main'' or ``master''\footnote{GitHub, together with
+              many other software projects~\cite{ZDNet_master_main}, decided in 2020 to revise offensive or inappropriate technical terms.
+              The hosting provider changed its default git repository branch name from ``master'' to ``main''~\cite{github_main_master}.}, having a history of least 101
+          commits. This branch is considered to be the default branch.
+    \item The repository is not archived.
+    \item The repository is publicly accessible and readable.
+    \item The description of the repository does not contain the words ``tutorial'', ``example'' or ``sample''.
+    \item The repository contains a Maven configuration file (``pom.xml'') in its root folder.
+\end{itemize}
+
+In addition to these criteria, we also excluded repositories that contained too few JUnit test
+cases, as these repositories do not represent serious software development projects. This criterion
+for project selection is common in research and was also used for evaluating the Ekstazi
+\ac{rts}-tool~\cite{ekstazimain}. We therefore
+examined the state of the repository at 100 commits before the current default branch's latest commit and counted all
+appearances of the keywords \texttt{@Test} for JUnit 4 and 5 test cases and \texttt{extends TestCase} for
+JUnit 3 test cases. We are aware that we might underestimate the amount of JUnit 3 test cases with
+this method. However, other means of counting would make this filter unnecessarily complicated and 100 test cases
+are already an arbitrarily chosen, lower limit which should be easily exceeded.
+
+The remaining set of software projects was sorted by the amount of stars, which users attributed to the
+projects. We included the top 100 projects of the resulting list in the further study.
+
+\subsubsection{Commit Selection}
+
+We searched for the previously identified patterns for sources of unsafety in a filtered subset of
+the latest commits in the selected projects. Only the latest 100 commits on the default branch of
+the repository (which
+introduce new changes) have been selected.
+% Additionally, the commit has to have a parent commit.
+% This is required to have a base state $S_0$ for the changes introduced in the commit.
+% Without this base repository state, any applied \ac{rts}-tool would have to execute every regression
+% test case anyways. However, this restriction is already enforced when selecting the projects and
+% therefore makes every additional check obsolete.
+
+\subsubsection{Automated Repository Scanning}\label{sssec:repo_scanning}
+
+Not all identified sources of unsafety are detectable using a simple and efficient scanning
+technique, without performing a dynamic analysis of the projects. We opted not to perform
+such a dynamic, in depth analysis. Most of the previously collected scanning candidates are not executable
+without individual configuration. Sorting out projects that do not
+work with dynamic analysis tools artificially filters the pool of examined projects,
+distorting the study's results.
+
+We also did not scan for changes of configuration files, as these must occur at some point in every selected
+repository, making an in-depth analysis unnecessary.
+
+For the efficient scan of the open source projects, we built a
+modular Python application. Scanner modules are classes that receive a commit and decide whether
+this commit should be treated as a source of unsafety. The main application iterates over the set of
+projects and their commits. Using the PyDriller library~\cite{pydriller}, we clone every project's
+repository. To recreate the project state after each commit, we use the PyDriller git integration to
+programmatically check out each commit. Then, we call each scanner module to test for its source of
+unsafety in the program files. This process is repeated for the latest 100 commits of the previously
+selected 100 projects. The results are collected as \texttt{Dataframes} and stored in \texttt{.csv}-files via
+the pandas data manipulation library~\cite{pandas}.
+
+We created the following scanner modules to automatically detect sources of unsafety:
+
+\begin{itemize}
+    \setlength\itemsep{1em}
+    \item \textbf{External Files:}\\This scanner reports a source of unsafety if a file was
+          changed in the commit and its file path lies in either a resources or filter directory. These
+          directories' paths were chosen according to
+          the directory layout recommended by the Maven software management tool~\cite{maven_directory_layout}.
+
+    \item \textbf{Dependency Injection:}\\The dependency injection scanner holds a set of regular
+          expressions.
+          They identify keywords that are required for unsafe behavior with either the Spring or the Guice
+          framework (Table~\ref{table:dep_inj_keywords}). We search for these expressions in the changed lines
+          of Java source code of each commit. Every match is a potential source of unsafety, as it may not be
+          recognized by one of our examined \ac{rts}-tools.
+
+    \item \textbf{Runtime Instrumentation:}\\We perform a search for problematic methods which were found in the evaluation of
+          Section~\ref{ssec:runtime_instrumentation} (Table~\ref{table:runtime_instr_methods}).
+          With the program state right after the commit checked
+          out, we read every Java code file in the project's directory and test if it contains one of the affected
+          methods. This gives an overview over the commits that are not able to run with the problematic tools
+          enabled.
+
+    \item \textbf{Reflections:}\label{scanner:reflections}
+          \\Although reflections are especially problematic, changes to reflectively accessed source code are
+          hard to automatically detect. The class paths
+          for reflective accesses are often only evaluated at runtime, e.g.~with the factory pattern. That is
+          why we focused on detecting whether a project contains reflective accesses at all. This was done
+          using a regular expression that detects \texttt{Class.forName} method calls. In a second step, we
+          attempted to detect changes to classes that are actually accessed using reflections. As explained, this
+          is not a trivial task. Our solution only supports hard coded class paths, leading to rather
+          conservative estimations and incomplete evaluation results.
+\end{itemize}

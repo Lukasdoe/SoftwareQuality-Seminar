@@ -1,0 +1,162 @@
+\section{Appendix}\label{sec:appendix}
+
+\begin{table}[H]
+    \caption{Keywords required for unsafety in dependency injection.}\label{table:dep_inj_keywords}
+    \centering
+    \begin{tabular}{l | l || l | l}
+        \hline
+        \multicolumn{2}{l ||}{Spring Framework} & \multicolumn{2}{| l}{Guice Framework}                                                                   \\
+        \hline
+        Keyword                                & Regular expression                    & Keyword                        & Regular expression             \\
+        \hline
+        \texttt{@Bean}                         & \texttt{@Bean}                        & \texttt{@AutoBindSingleton}    & \texttt{@AutoBindSingleton}    \\
+        \texttt{@Component}                    & \texttt{@Component}                   & \texttt{@Provides}             & \texttt{@Provides}             \\
+                                               &                                       & \texttt{@CheckedProvides}      & \texttt{@CheckedProvides}      \\
+                                               &                                       & \texttt{@ProvidesIntoSet}      & \texttt{@ProvidesIntoSet}      \\
+                                               &                                       & \texttt{@ProvidesIntoMap}      & \texttt{@ProvidesIntoMap}      \\
+                                               &                                       & \texttt{@ProvidesIntoOptional} & \texttt{@ProvidesIntoOptional} \\
+                                               &                                       & \texttt{bind(...)}             & \verb|bind\(.*\)|         \\
+                                               &                                       & \texttt{LifecycleInjector}     & \texttt{LifecycleInjector}     \\
+    \end{tabular}
+\end{table}
+
+\vspace{1cm}
+
+\begin{table}[H]
+    \caption{Methods whose behavior changes with the corresponding \ac{rts}-tools runtime
+        instrumentation. All methods are called on the meta class object of type \nolinkurl{Class}.}\label{table:runtime_instr_methods}
+    \centering
+    \begin{tabular}{l | l}
+        \hline
+        \emph{Ekstazi}                    & \emph{OpenClover}             \\
+        \hline
+        \texttt{getAnnotatedInterfaces()} & \texttt{getDeclaredClasses()} \\
+        \texttt{etAnnotatedSuperclass()}  & \texttt{getDeclaredFields()}  \\
+        \texttt{toGenericString()}        & \texttt{getClasses()}         \\
+                                          & \texttt{getFields()}          \\
+    \end{tabular}
+\end{table}
+
+\vspace{1cm}
+
+\begin{figure}[H]
+    \caption{Sources of unsafety per repository, discovered in repositories and commits collected in
+        Section~\ref{sec:foss_search} (Including all outliers).}\label{appx:fig:box_plot}
+    \centering
+    \vspace{2em}
+    \includegraphics{./figures/pdf/box_plot_outliers.pdf}
+\end{figure}
+
+\vspace{1cm}
+
+\begin{longtable}{l | l | l | l}
+    \caption{List of selected open source projects. (Collected between 11/11/2021 and 11/13/2021)}\label{table:foss_projects_list}                  \\
+    \hline
+    Organisation / User & Repository Name           & Stars & \parbox[l][4.2em][c]{7em}{Last examined \\commit hash\\(truncated)} \\
+    \hline
+    \endfirsthead
+    \hline
+    Organisation / User & Repository Name           & Stars & \parbox[l][4.2em][c]{7em}{Last examined \\commit hash\\(truncated)} \\
+    \hline
+    \endhead
+    iluwatar            & java-design-patterns      & 71106 & 2674cb9523a6                            \\
+    google              & guava                     & 42835 & a2bbcc3bc2b4                            \\
+    apache              & dubbo                     & 36435 & ae6c6a9a9ab1                            \\
+    zxing               & zxing                     & 28624 & c25029d29ad2                            \\
+    eugenp              & tutorials                 & 28091 & 41c8af76d2c9                            \\
+    netty               & netty                     & 27936 & 3d6bed01cd07                            \\
+    alibaba             & arthas                    & 27624 & 3792ca308785                            \\
+    apolloconfig        & apollo                    & 25882 & 02fff624870a                            \\
+    alibaba             & druid                     & 24749 & 3b4e77034a62                            \\
+    xkcoding            & spring-boot-demo          & 23941 & f10dc0a45be8                            \\
+    alibaba             & fastjson                  & 23926 & 869746101f6d                            \\
+    dbeaver             & dbeaver                   & 23148 & 2e1a4eda8b07                            \\
+    alibaba             & easyexcel                 & 21750 & f8fd5f0427f0                            \\
+    alibaba             & canal                     & 21143 & b54bea5e3337                            \\
+    seata               & seata                     & 21111 & 5ddfbc1f3cb7                            \\
+    alibaba             & spring-cloud-alibaba      & 20593 & 8bd5a8d688d4                            \\
+    alibaba             & nacos                     & 20257 & 5a4d433970be                            \\
+    google              & gson                      & 20255 & 6e06bf0d89ad                            \\
+    apache              & skywalking                & 18107 & b63008c61e1f                            \\
+    jenkinsci           & jenkins                   & 18057 & 09f0269e8762                            \\
+    alibaba             & Sentinel                  & 17814 & 0a34fc4d1139                            \\
+    redisson            & redisson                  & 17747 & fdcb943828c5                            \\
+    apache              & flink                     & 17519 & 1529b78ddc4a                            \\
+    mybatis             & mybatis-3                 & 16455 & a2cdac6f7664                            \\
+    brettwooldridge     & HikariCP                  & 15981 & 8b4a6bbebb77                            \\
+    apache              & rocketmq                  & 15852 & df4e98855d46                            \\
+    openzipkin          & zipkin                    & 14868 & b6a5f76c4d13                            \\
+    apache              & shardingsphere            & 14825 & c2c51985437e                            \\
+    prestodb            & presto                    & 12808 & 70f8f59e0889                            \\
+    eclipse-vertx       & vert.x                    & 12482 & 3c494da0a4a8                            \\
+    YunaiV              & SpringBoot-Labs           & 12249 & 85c7322b9d1a                            \\
+    eclipse             & deeplearning4j            & 12244 & a12d6eecbc61                            \\
+    apache              & hadoop                    & 12081 & 7bc78ab70790                            \\
+    pinpoint-apm        & pinpoint                  & 11801 & 15577df66448                            \\
+    apache              & druid                     & 11335 & 6f6e88e02ed0                            \\
+    pagehelper          & Mybatis-PageHelper        & 10763 & 4b0484662bae                            \\
+    google              & guice                     & 10532 & 0ce94279a16d                            \\
+    keycloak            & keycloak                  & 10508 & 2f8c5dd05e74                            \\
+    thingsboard         & thingsboard               & 10358 & f2974532c607                            \\
+    codecentric         & spring-boot-admin         & 10331 & 2076c6ac1d85                            \\
+    OpenAPITools        & openapi-generator         & 10276 & 70737fb1e6b6                            \\
+    redis               & jedis                     & 10127 & 253664ff1eac                            \\
+    apache              & zookeeper                 & 9962  & 864b8a7c8044                            \\
+    apache              & pulsar                    & 9880  & 2c4d913c4b3f                            \\
+    square              & javapoet                  & 9255  & 88517888277e                            \\
+    perwendel           & spark                     & 9209  & 54079b0f95f0                            \\
+    MyCATApache         & Mycat-Server              & 9140  & 92174cd734f1                            \\
+    jhy                 & jsoup                     & 9122  & 46b0b9569a76                            \\
+    quarkusio           & quarkus                   & 8816  & 0f896210478b                            \\
+    TooTallNate         & Java-WebSocket            & 8558  & bcfc9675d611                            \\
+    OpenRefine          & OpenRefine                & 8481  & 8d06810af85a                            \\
+    stanfordnlp         & CoreNLP                   & 8219  & 0f7c464edc7c                            \\
+    junit-team          & junit4                    & 8213  & 7167b23b3ba7                            \\
+    Activiti            & Activiti                  & 8159  & f9351cc5b978                            \\
+    dropwizard          & dropwizard                & 8054  & 684c51ecbf43                            \\
+    square              & moshi                     & 7744  & 954ca46b9ed9                            \\
+    OpenFeign           & feign                     & 7607  & f21d32a7d9d9                            \\
+    apache              & shardingsphere-elasticjob & 7320  & 49506b53cbfa                            \\
+    signalapp           & Signal-Server             & 7210  & aaa2a6eef17f                            \\
+    vipshop             & vjtools                   & 7182  & 4c1ee2a312b7                            \\
+    questdb             & questdb                   & 6915  & 883474bd7513                            \\
+    alibaba             & otter                     & 6893  & 7f80d17d74e5                            \\
+    apache              & dolphinscheduler          & 6702  & daf21b09dd94                            \\
+    abel533             & Mapper                    & 6658  & 84e33f7c9e11                            \\
+    NLPchina            & elasticsearch-sql         & 6539  & 4b1c87eb1cfe                            \\
+    Angel-ML            & angel                     & 6437  & 0e60cddf5efa                            \\
+    checkstyle          & checkstyle                & 6337  & b6e54419d8bd                            \\
+    apache              & storm                     & 6297  & f481eaf043db                            \\
+    NanoHttpd           & nanohttpd                 & 6118  & efb2ebf85a2b                            \\
+    Graylog2            & graylog2-server           & 5890  & 4ddbc427df79                            \\
+    AsyncHttpClient     & async-http-client         & 5854  & c959fa0483ad                            \\
+    google              & error-prone               & 5749  & f10bba5891d9                            \\
+    weibocom            & motan                     & 5746  & f9c46071eafc                            \\
+    sohutv              & cachecloud                & 5674  & f9dfc98eadcf                            \\
+    debezium            & debezium                  & 5625  & 39ecc4e73248                            \\
+    joelittlejohn       & jsonschema2pojo           & 5608  & 4d00331095a1                            \\
+    rest-assured        & rest-assured              & 5584  & 4eeb3d82b1d4                            \\
+    lets-blade          & blade                     & 5563  & 118d856b53bd                            \\
+    languagetool-org    & languagetool              & 5535  & a76e5ab4938c                            \\
+    apache              & zeppelin                  & 5478  & cd09f93b0d71                            \\
+    apache              & incubator-shenyu          & 5463  & 2f5cc73fb7f5                            \\
+    karatelabs          & karate                    & 5383  & 14807dbf8d7c                            \\
+    pentaho             & pentaho-kettle            & 5336  & b79362de3e19                            \\
+    Alluxio             & alluxio                   & 5300  & b9681d4ec598                            \\
+    scribejava          & scribejava                & 5218  & 124745961e99                            \\
+    JodaOrg             & joda-time                 & 4723  & e9337f0c0955                            \\
+    quartz-scheduler    & quartz                    & 4706  & cbce9b6d0669                            \\
+    hazelcast           & hazelcast                 & 4611  & d05be9ecf18d                            \\
+    raphw               & byte-buddy                & 4601  & 7402e597870d                            \\
+    confluentinc        & ksql                      & 4598  & 0de5dda35ccc                            \\
+    mapstruct           & mapstruct                 & 4567  & 735a5bef6a36                            \\
+    flowable            & flowable-engine           & 4562  & f7323c2b0424                            \\
+    gephi               & gephi                     & 4503  & db454c59cc9d                            \\
+    spring-projects     & spring-security-oauth     & 4484  & 2b58aafecac3                            \\
+    spring-cloud        & spring-cloud-netflix      & 4483  & dc45b7f580fa                            \\
+    sofastack           & sofa-boot                 & 4405  & f65941f97fb9                            \\
+    orientechnologies   & orientdb                  & 4378  & 3a394ef87dc4                            \\
+    trinodb             & trino                     & 4368  & a836e7c223b1                            \\
+    lettuce-io          & lettuce-core              & 4262  & b0a392f606d9                            \\
+    apache              & hbase                     & 4260  & 8458e44a1a7d                            \\
+\end{longtable}

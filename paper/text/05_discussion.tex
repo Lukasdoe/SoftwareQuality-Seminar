@@ -1,0 +1,37 @@
+\section{Discussion}
+\subsubsection{Maintenance}
+Many of the problems and sources of unsafety introduced by the examined \ac{rts}-tools are caused by
+incompatibilities of the tools with modern language features. Especially \emph{Ekstazi}, being one of the
+most promising examined tools, is outdated and cannot be used in projects in its current state.
+This abandonment of \ac{rts}-tools, such as \emph{HyRTS}, \emph{Ekstazi} and \emph{GIBstazi}\footnote{\emph{STARTS} has recently
+    been maintained and is therefore not considered abandoned.}, leads to a market full of
+unusable \ac{rts} solutions. Research should focus more on updating and improving existing open
+source solutions than developing new projects from scratch that are not going to be maintained.
+
+\subsubsection{Usability of the Examined Tools}
+Looking at the discovered sources of unsafety and their occurrence in current Java software development,
+it is clear that none of the examined tools should be used without in-depth knowledge of their
+downsides. Because of the continued maintenance on the \emph{STARTS} program, we see high future potential in
+this static \ac{rts}-tool. However, the current latest official release (version 1.3) is not functional. The
+previously described state of dynamic \ac{rts} for Java is alarming. The examined tools are all
+poorly maintained. The most up-to-date tool is \emph{OpenClover} with its last release in October 2019.
+The dynamic tools also act surprisingly unsafe, compared to the possibilities they have for monitoring changes.
+
+\subsection{Limitations}
+This paper does not claim to include all sources of unsafety that occur when using one of the
+examined tools. They may contain bugs that we did not find. Other external tools or libraries, for example other
+\ac{di} frameworks than Spring or Guice, could also cause undiscovered unsafety. We concentrated on
+evaluating the major causes of unsafety that are likely to occur in real world software projects.
+
+The results of the repository scanning are limited by the number of scanner modules, our methodology
+and the selection of projects. We did not scan for all discovered sources of unsafety. Our scanning
+approach trades simplicity for accuracy, meaning the results are prone to including false positives
+and false negatives.
+Every line of text in a Java source code file was treated as runnable code, only plaintext files
+were analyzed. Many well known Java projects were excluded from this study, because we use the GitHub stars
+feature to determine the popularity of projects and they did not have enough stars to be included in
+the top 100 repositories.
+
+We excluded all projects that do not use the Maven build system. This was necessary to enforce a
+uniform project structure for the external files scanner module. The Maven tool is used by
+approximately 60\% of all Java projects~\cite{project_management_tools_report}, making it a viable prerequisite for scanned projects. 

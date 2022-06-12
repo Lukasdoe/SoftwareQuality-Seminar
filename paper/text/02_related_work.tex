@@ -1,0 +1,70 @@
+\section{Related Work}
+% 3 major research papers: -> all either evaluate the approach or trust the authors! 
+%     * rts_techniques -> classification of safe vs unsafe for rts papers and
+%         techniques -> general, no tool associated, not only for java, abstract
+%     * rts_techniques2 -> also just classification -> they trust the authors!
+% * rts_survey -> same problem, general survey of techniques and evaluation of their safety in
+% theory.
+Broad reviews and surveys of \ac{rts} techniques~\cite{rts_techniques,rts_techniques2} 
+evaluated theoretical approaches and
+combined the knowledge of existing research papers in great detail. 
+However, they did not specify or supply an implementation
+and did not focus specifically on the Java programming language. This opens the possibility for discrepancies 
+between theoretical safety and the safety of the resulting \ac{rts}-tool.
+
+\par
+
+% Tool papers:
+%     * ekstazi_spec -> 
+%
+% "While we provide no
+% formal proof that Ekstazi is safe, its safety follows directly
+% from the proven safety for RTS based on class dependen-
+% cies [52] and partial builds based on file dependencies [17]."
+% 
+% "Ekstazi technique is safe for any code change and any
+% change on the file system. The safety of Ekstazi intuitively
+% follows from the proven safety of RTS based on class de-
+% pendencies [52] and partial builds based on file dependen-"
+
+% [52] M. Skoglund and P. Runeson. Improving class fire-
+% wall regression test selection by removing the class fire-
+% wall. International Journal of Software Engineering and
+% Knowledge Engineering, 17(3):359–378, 2007.
+
+% [17] M. Christakis, K. R. M. Leino, and W. Schulte. Formal-
+% izing and verifying a modern build language. In Interna-
+% tional Symposium on Formal Methods, pages 643–657,
+% 2014.
+
+While the study behind the \emph{Ekstazi} \ac{rts}-tool claimed to provide a safe implementation because
+of the proven safety of their approach, they lack a formal proof of this
+inference. Additionally, unsafety might be introduced by their implementation, as
+stated in their internal threats to validity.~\cite{ekstazispec}
+
+% 
+%     * hyrts_paper -> provides proof that their approach does not add new safety
+
+The \emph{HyRTS} software paper provided a formal proof that their approach of hybrid code change
+transformations does not add to the unsafety of dynamic \ac{rts}. They did not evaluate the existing
+sources of unsafety.\cite{hyrts_paper}
+
+%     * starts_paper 
+The papers published about the \emph{STARTS} \ac{rts}-tool~\cite{prestarts,starts_paper} discussed the possible safety issues of static
+\ac{rts} in combination with reflections and changes between compile-time and runtime dependencies.
+However, when experimentally evaluating the unsafety of the predecessor tools of \emph{STARTS}, they used the
+\emph{Ekstazi} \ac{rts}-tool as a reference for a safe \ac{rts} technique~\cite{prestarts}. This assumption
+could lead to imprecisions in the detection of unsafety when both, \emph{Ekstazi} and \emph{STARTS}, acted in an
+unsafe manner.
+
+Zhu and others (2019) built a framework for checking \ac{rts}-tools. They evaluated the safety,
+precision and generality issues of \emph{Ekstazi}, \emph{STARTS} and \emph{OpenClover}. However, they focused on building
+a framework that automatically detects defects in the evaluated catagories. This leads to very specific findings that do
+not transfer to general problems with the examined \ac{rts}-tools. An exception to this observation
+is their discovery that none of the evaluated tools detect changes to non-Java files.\cite{unsafety_eval}
+
+It is worth noting that none of the papers published about the examined \ac{rts}-
+tools~\cite{ekstazimain,ekstazispec,prestarts,starts_paper,hyrts_paper,gibstazi_paper} evaluates the
+safety of their proposed tools in combination with \ac{di} frameworks, although they are widely used
+in professional Java software development.\footnote{Experimental evidence that supports this statement is
+shown in Section~\ref{ssec:eval:3_4}.}

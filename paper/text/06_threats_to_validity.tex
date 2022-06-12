@@ -1,0 +1,20 @@
+\section{Threads to Validity}
+
+\subsubsection{External}
+The examined study objects are a selection of currently available \ac{rts}-tools for the Java
+programming language that may not fully represent the capabilities and problems of other existing
+tools. We chose this selection of promising static and dynamic \ac{rts} solutions based on their
+occurrence in other studies and software projects. The repository selection of the 100 projects 
+that were scanned may also limit the generalizability of the results. For this reason, we have chosen the
+repositories base on their popularity and not based on other research papers or external sources,
+like it was done in previous research~\cite{ekstazimain,hyrts_paper,starts_paper}. 
+% Selecting only
+% repositories that use Maven for project management might have introduced a slight selection bias,
+% but was necessary 
+
+\subsubsection{Internal}
+\ac{poc} repositories and automatic scan scripts may contain bugs. To mitigate this risk, we
+performed tests on \ac{poc} repositories manually and multiple times to identify flaky and buggy behavior.
+The code for the evaluation of scan results was written twice in different ways to eliminate logical
+programming errors. We only used well maintained, popular open source libraries for the git integration
+and data manipulation to reduce the risk of hidden errors in third party code.
