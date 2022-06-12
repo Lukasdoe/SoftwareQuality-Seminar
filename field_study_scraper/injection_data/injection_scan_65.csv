@@ -1,0 +1,11 @@
+,commit_hash,file_path,filename,action,change,line
+0,d4dff300d836ae71c58704cb81b3df45799402a3,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,"            @BeanProperty val numNodes: Long = Int.MaxValue.toLong,",26
+1,d4dff300d836ae71c58704cb81b3df45799402a3,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,"            @BeanProperty val useBalancePartition: Boolean = false,",29
+2,d4dff300d836ae71c58704cb81b3df45799402a3,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,            @BeanProperty val nodeNum: Long = 0L,30
+3,d4dff300d836ae71c58704cb81b3df45799402a3,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,"            @BeanProperty val numNodes: Long = -1L,",26
+4,d4dff300d836ae71c58704cb81b3df45799402a3,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,            @BeanProperty val useBalancePartition: Boolean = false,29
+5,c61f720c5e2147d28efc8e4cfc1d0355bff1c408,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,            @BeanProperty val nodeNum: Long = -1L,27
+6,c61f720c5e2147d28efc8e4cfc1d0355bff1c408,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,"            @BeanProperty val numNodes: Long = Int.MaxValue.toLong,",26
+7,c61f720c5e2147d28efc8e4cfc1d0355bff1c408,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,"            @BeanProperty val matrixName: String = ""BaseGraph"",",28
+8,c61f720c5e2147d28efc8e4cfc1d0355bff1c408,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,"            @BeanProperty val useBalancePartition: Boolean = false,",29
+9,c61f720c5e2147d28efc8e4cfc1d0355bff1c408,spark-on-angel/graph/src/main/scala/com/tencent/angel/graph/Param.scala,Param.scala,5,            @BeanProperty val nodeNum: Long = 0L,30

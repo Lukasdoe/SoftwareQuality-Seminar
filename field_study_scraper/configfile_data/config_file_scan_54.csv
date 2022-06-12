@@ -1,0 +1,2 @@
+,commit_hash,file_path,filename,action,changes
+0,0d3c9392e92a07ce98bd79d4782f4d80ce8e0ad8,dropwizard-validation/src/test/resources/slf4jtest.properties,slf4jtest.properties,4,"{'added': [], 'deleted': [(1, 'print.level=INFO')]}"

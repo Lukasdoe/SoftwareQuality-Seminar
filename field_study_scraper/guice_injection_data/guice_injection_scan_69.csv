@@ -1,0 +1,13 @@
+,commit_hash,file_path,filename,reason,change,line
+0,5f73758477bc850f6dc5c511507537ae3811fe67,graylog2-server/src/main/java/org/graylog/plugins/views/ViewsBindings.java,ViewsBindings.java,bind\(.*\),        bind(SearchConfig.class).toProvider(SearchConfigProvider.class);,208
+1,5cf6f7cb50bdaa8bb63946e0d384b8502d0aedc3,graylog2-server/src/main/java/org/graylog2/shared/bindings/GenericBindings.java,GenericBindings.java,bind\(.*\),        bind(InputBuffer.class).to(InputBufferImpl.class);,67
+2,5cf6f7cb50bdaa8bb63946e0d384b8502d0aedc3,graylog2-server/src/main/java/org/graylog2/shared/bindings/GenericBindings.java,GenericBindings.java,bind\(.*\),        bind(ServiceManager.class).toProvider(ServiceManagerProvider.class).asEagerSingleton();,70
+3,5cf6f7cb50bdaa8bb63946e0d384b8502d0aedc3,graylog2-server/src/main/java/org/graylog2/shared/bindings/GenericBindings.java,GenericBindings.java,bind\(.*\),            bind(InputBuffer.class).to(NoopInputBuffer.class);,74
+4,5cf6f7cb50bdaa8bb63946e0d384b8502d0aedc3,graylog2-server/src/main/java/org/graylog2/shared/bindings/GenericBindings.java,GenericBindings.java,bind\(.*\),            bind(InputBuffer.class).to(InputBufferImpl.class);,76
+5,5cf6f7cb50bdaa8bb63946e0d384b8502d0aedc3,graylog2-server/src/main/java/org/graylog2/shared/bindings/GenericBindings.java,GenericBindings.java,bind\(.*\),            bind(ServiceManager.class).toProvider(ServiceManagerProvider.class).asEagerSingleton();,81
+6,8d19d8cff5a622676612c95fe1a5d40fe983ac42,graylog2-web-interface/src/stores/streams/StreamRulesStore.ts,StreamRulesStore.ts,bind\(.*\),      .then(this._emitChange.bind(this));,63
+7,8d19d8cff5a622676612c95fe1a5d40fe983ac42,graylog2-web-interface/src/stores/streams/StreamRulesStore.ts,StreamRulesStore.ts,bind\(.*\),      .then(this._emitChange.bind(this));,75
+8,8d19d8cff5a622676612c95fe1a5d40fe983ac42,graylog2-web-interface/src/stores/streams/StreamRulesStore.ts,StreamRulesStore.ts,bind\(.*\),      .then(this._emitChange.bind(this));,87
+9,8d19d8cff5a622676612c95fe1a5d40fe983ac42,graylog2-web-interface/src/stores/streams/StreamRulesStore.ts,StreamRulesStore.ts,bind\(.*\),        .then(this._emitChange.bind(this));,67
+10,8d19d8cff5a622676612c95fe1a5d40fe983ac42,graylog2-web-interface/src/stores/streams/StreamRulesStore.ts,StreamRulesStore.ts,bind\(.*\),        .then(this._emitChange.bind(this));,79
+11,8d19d8cff5a622676612c95fe1a5d40fe983ac42,graylog2-web-interface/src/stores/streams/StreamRulesStore.ts,StreamRulesStore.ts,bind\(.*\),        .then(this._emitChange.bind(this));,91

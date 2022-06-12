@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,action,changes
+0,f1f90313fc22c122a28716e7ecac1543e6fa253e,gson/src/test/resources/testcases-proguard.conf,testcases-proguard.conf,5,"{'added': [(6, '# On Windows mixed case class names might cause problems'), (7, '-dontusemixedcaseclassnames'), (22, '# Ignore notes about duplicate JDK classes'), (23, '-dontnote module-info,jdk.internal.**')], 'deleted': [(20, '')]}"
+1,e99a4b1cb721d8153c4cf9659571fe7ea352799b,gson/src/test/resources/testcases-proguard.conf,testcases-proguard.conf,3,"{'added': [], 'deleted': []}"

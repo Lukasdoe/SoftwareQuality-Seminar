@@ -1,0 +1,2 @@
+,commit_hash,file_path,filename,action,changes
+0,b15ef5375e45748426d75a7fb09bb894bd37d04a,src/test/resources/public/js/module.mjs,module.mjs,1,"{'added': [(1, 'export default function () { console.log(""Hello, I\'m a .mjs file""); }')], 'deleted': []}"

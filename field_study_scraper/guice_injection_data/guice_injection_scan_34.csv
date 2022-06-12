@@ -1,0 +1,8 @@
+,commit_hash,file_path,filename,reason,change,line
+0,a8805ab60d2cab7c9835c666a8dbe2f50da36f92,sql/src/test/java/org/apache/druid/sql/calcite/util/CalciteTests.java,CalciteTests.java,bind\(.*\),"        binder.bind(Key.get(ObjectMapper.class, Json.class)).toInstance(TestHelper.makeJsonMapper());",245
+1,a8805ab60d2cab7c9835c666a8dbe2f50da36f92,sql/src/test/java/org/apache/druid/sql/calcite/util/CalciteTests.java,CalciteTests.java,bind\(.*\),"        binder.bind(Key.get(ObjectMapper.class, Json.class)).toInstance(",267
+2,7237dc837cf335558fa7981c4297d2d3b40a730e,core/src/main/java/org/apache/druid/math/expr/ExpressionProcessingModule.java,ExpressionProcessingModule.java,bind\(.*\),"    JsonConfigProvider.bind(binder, ""druid.expressions"", ExpressionProcessingConfig.class);",31
+3,8276c031c52af5ab1bc8398c28f4fce2f0d72702,sql/src/main/java/org/apache/druid/sql/calcite/aggregation/SqlAggregationModule.java,SqlAggregationModule.java,@Provides,  @Provides,67
+4,1930ad1f47126210524a1a9b0bd56627355b51e0,server/src/test/java/org/apache/druid/client/BrokerInternalQueryConfigTest.java,BrokerInternalQueryConfigTest.java,bind\(.*\),"            JsonConfigProvider.bind(binder, ""druid.broker.internal.query.config"", BrokerInternalQueryConfig.class);",107
+5,1930ad1f47126210524a1a9b0bd56627355b51e0,server/src/test/java/org/apache/druid/client/BrokerInternalQueryConfigTest.java,BrokerInternalQueryConfigTest.java,@Provides,          @Provides,110
+6,1930ad1f47126210524a1a9b0bd56627355b51e0,services/src/main/java/org/apache/druid/cli/CliBroker.java,CliBroker.java,bind\(.*\),"          JsonConfigProvider.bind(binder, ""druid.broker.internal.query.config"", BrokerInternalQueryConfig.class);",130

@@ -1,0 +1,7 @@
+,commit_hash,file_path,filename,action,change,line
+0,d110f5a005ee0410ebee0c72dd2f55517a68597d,application/src/main/java/org/thingsboard/server/config/SwaggerConfiguration.java,SwaggerConfiguration.java,5,    @Bean,147
+1,d110f5a005ee0410ebee0c72dd2f55517a68597d,application/src/main/java/org/thingsboard/server/config/SwaggerConfiguration.java,SwaggerConfiguration.java,5,    @Bean,163
+2,d110f5a005ee0410ebee0c72dd2f55517a68597d,application/src/main/java/org/thingsboard/server/config/SwaggerConfiguration.java,SwaggerConfiguration.java,5,    @Bean,185
+3,84f2bdd2dedfde61b9360bc28456aa91ac773008,ui-ngx/src/app/modules/home/components/widget/legend-config-panel.component.ts,legend-config-panel.component.ts,4,@Component({,38
+4,483a69fed1981ee07e14b9b00f15f6f515828b82,common/transport/transport-api/src/main/java/org/thingsboard/server/common/transport/config/ssl/SslCredentialsWebServerCustomizer.java,SslCredentialsWebServerCustomizer.java,1,@Component,32
+5,483a69fed1981ee07e14b9b00f15f6f515828b82,common/transport/transport-api/src/main/java/org/thingsboard/server/common/transport/config/ssl/SslCredentialsWebServerCustomizer.java,SslCredentialsWebServerCustomizer.java,1,    @Bean,36

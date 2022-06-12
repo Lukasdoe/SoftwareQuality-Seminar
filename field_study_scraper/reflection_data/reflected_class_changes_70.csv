@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,action,reflective_reference_filepath,reflective_reference_line
+0,1e1a84409e551d8455faa9595c09b56d46e63f74,client/src/main/java/org/asynchttpclient/netty/channel/EpollTransportFactory.java,EpollTransportFactory.java,1,client/src/main/java/org/asynchttpclient/netty/channel/ChannelManager.java,190
+1,1e1a84409e551d8455faa9595c09b56d46e63f74,client/src/main/java/org/asynchttpclient/netty/channel/KQueueTransportFactory.java,KQueueTransportFactory.java,1,client/src/main/java/org/asynchttpclient/netty/channel/ChannelManager.java,193

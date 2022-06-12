@@ -1,0 +1,6 @@
+,commit_hash,file_path,filename,action,changes
+0,f5c2ec1f00e1cc2ada278a862048f1a813aeacfd,markdown-plugin/src/main/resources/META-INF/services/fi.iki.elonen.WebServerPluginInfo,fi.iki.elonen.WebServerPluginInfo,4,"{'added': [], 'deleted': [(1, 'fi.iki.elonen.MarkdownWebServerPluginInfo')]}"
+1,f5c2ec1f00e1cc2ada278a862048f1a813aeacfd,markdown-plugin/src/main/resources/META-INF/services/org.nanohttpd.webserver.WebServerPluginInfo,org.nanohttpd.webserver.WebServerPluginInfo,1,"{'added': [(1, 'org.nanohttpd.markdown.MarkdownWebServerPluginInfo')], 'deleted': []}"
+2,f5c2ec1f00e1cc2ada278a862048f1a813aeacfd,webserver/src/test/resources/META-INF/services/fi.iki.elonen.WebServerPluginInfo,fi.iki.elonen.WebServerPluginInfo,4,"{'added': [], 'deleted': [(1, 'fi.iki.elonen.DummyPluginInfo')]}"
+3,f5c2ec1f00e1cc2ada278a862048f1a813aeacfd,webserver/src/test/resources/META-INF/services/org.nanohttpd.webserver.WebServerPluginInfo,org.nanohttpd.webserver.WebServerPluginInfo,1,"{'added': [(1, 'org.nanohttpd.junit.webserver.DummyPluginInfo')], 'deleted': []}"
+4,add9a1eee04437f86c9e9b5a19a1769a637bc5a3,webserver/src/test/resources/testdir/testdir/index.html,index.html,1,"{'added': [(1, '<html>'), (2, '<head>'), (3, '<title>Simple index file</title>'), (4, '</head>'), (5, '</html>')], 'deleted': []}"

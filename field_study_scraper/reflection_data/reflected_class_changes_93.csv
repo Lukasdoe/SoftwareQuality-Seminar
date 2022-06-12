@@ -1,0 +1,2 @@
+,commit_hash,file_path,filename,action,reflective_reference_filepath,reflective_reference_line
+0,0e7baf7e91e145d8eb738d4a5e1cda94153b7b3d,spring-security-oauth/src/main/java/org/springframework/security/oauth/consumer/net/DefaultOAuthURLStreamHandlerFactory.java,DefaultOAuthURLStreamHandlerFactory.java,5,spring-security-oauth/src/main/java/org/springframework/security/oauth/consumer/client/CoreOAuthConsumerSupport.java,76

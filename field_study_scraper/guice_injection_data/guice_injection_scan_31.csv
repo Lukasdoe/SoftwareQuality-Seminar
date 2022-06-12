@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,reason,change,line
+0,7b418c932f9b365e4ea76908511674216ccca1fa,Test Results - org_nd4j_autodiff_opvalidation_in_nd4j-tests.html,Test Results - org_nd4j_autodiff_opvalidation_in_nd4j-tests.html,bind\(.*\),"			return this.bind(""add"", function(event, branches) {",523
+1,95988f482d99836ce36dbad45f09d72ccd5c295d,Test Results - org_nd4j_autodiff_opvalidation_in_nd4j-tests.html,Test Results - org_nd4j_autodiff_opvalidation_in_nd4j-tests.html,bind\(.*\),"			return this.bind(""add"", function(event, branches) {",523

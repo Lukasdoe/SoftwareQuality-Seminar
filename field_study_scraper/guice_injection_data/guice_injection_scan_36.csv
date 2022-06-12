@@ -1,0 +1,729 @@
+,commit_hash,file_path,filename,reason,change,line
+0,2aefd5494664a1b847d911e2919f8cfbd4260c12,core/src/com/google/inject/spi/ElementSource.java,ElementSource.java,bind\(.*\),   *   <li>{@code Binder.bind()},153
+1,9d12b481ddd60f8a9cb1be5413a26b76bd9807cf,extensions/dagger-adapter/test/com/google/inject/daggeradapter/ModuleIncludesTest.java,ModuleIncludesTest.java,@Provides,    @Provides,145
+2,c6fd1423ce4caa346f915ae7ae46df3d4b01c684,core/test/com/google/inject/MethodInterceptionTest.java,MethodInterceptionTest.java,bind\(.*\),                bind(RawReturn.class).to(MixedReturn.class);,634
+3,c6fd1423ce4caa346f915ae7ae46df3d4b01c684,core/test/com/google/inject/MethodInterceptionTest.java,MethodInterceptionTest.java,bind\(.*\),                bind(ShardedStringProvider.class).to(ShardedStringProviderImpl.class);,673
+4,a260458b28b2dad9e2c8cfca2a2783e585784ab6,core/src/com/google/inject/internal/RealMapBinder.java,RealMapBinder.java,bind\(.*\),    binder.bind(bindingSelection.getMapKey()).toProvider(mapProvider);,313
+5,a260458b28b2dad9e2c8cfca2a2783e585784ab6,core/src/com/google/inject/internal/RealMapBinder.java,RealMapBinder.java,bind\(.*\),    binder.bind(bindingSelection.getMapOfKeyExtendsValueKey()).to(bindingSelection.getMapKey());,323
+6,a260458b28b2dad9e2c8cfca2a2783e585784ab6,core/src/com/google/inject/internal/RealMapBinder.java,RealMapBinder.java,bind\(.*\),        .bind(bindingSelection.getMapKey()),315
+7,a260458b28b2dad9e2c8cfca2a2783e585784ab6,core/src/com/google/inject/internal/RealMapBinder.java,RealMapBinder.java,bind\(.*\),    binder.bind(bindingSelection.getMapOfKeyExtendsValueKey()).toProvider(mapProvider);,318
+8,e6ec2a4a9433d64e763093a826eecf49f005aa5d,core/src/com/google/inject/internal/RealMultibinder.java,RealMultibinder.java,bind\(.*\),    binder.bind(bindingSelection.getSetOfExtendsKey()).to(bindingSelection.getSetKey());,110
+9,e6ec2a4a9433d64e763093a826eecf49f005aa5d,core/src/com/google/inject/internal/RealMultibinder.java,RealMultibinder.java,bind\(.*\),    binder.bind(bindingSelection.getSetOfExtendsKey()).toProvider(setProvider);,112
+10,9dc98cb7c710be0f4552e7d40d1cb29553b330cf,core/test/com/google/inject/spi/ModuleAnnotatedMethodScannerTest.java,ModuleAnnotatedMethodScannerTest.java,@Provides,          @Provides,228
+11,bfc2e48f4a008462ff74e0e73bc7e1cabc04e30d,core/test/com/google/inject/spi/SourcesTest.java,SourcesTest.java,bind\(.*\),"                        binder().skipSources(getClass()).bind(String.class).toInstance(""Foo"");",24
+12,bfc2e48f4a008462ff74e0e73bc7e1cabc04e30d,core/test/com/google/inject/spi/SourcesTest.java,SourcesTest.java,bind\(.*\),"            binder().bind(String.class).toInstance(""Foo"");",38
+13,826a97fced733fe8ea60de4ed0837a6f50ed406e,core/src/com/google/inject/Binding.java,Binding.java,bind\(.*\)," * <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()} statements:",30
+14,826a97fced733fe8ea60de4ed0837a6f50ed406e,core/src/com/google/inject/Binding.java,Binding.java,bind\(.*\)," *   <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()} statements:",30
+15,2712230640393acdd00f70640c44ae739d4103ec,core/test/com/google/inject/errors/NullInjectedIntoNonNullableTest.java,NullInjectedIntoNonNullableTest.java,@Provides,    @Provides,38
+16,2712230640393acdd00f70640c44ae739d4103ec,core/test/com/google/inject/errors/NullInjectedIntoNonNullableTest.java,NullInjectedIntoNonNullableTest.java,bind\(.*\),      bind(String.class).annotatedWith(Bar.class).toProvider(() -> null);,48
+17,2712230640393acdd00f70640c44ae739d4103ec,core/test/com/google/inject/errors/NullInjectedIntoNonNullableTest.java,NullInjectedIntoNonNullableTest.java,bind\(.*\),                .bind(String.class),67
+18,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/1.0.xml,1.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+19,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/1.0.xml,1.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+20,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/1.0.xml,1.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+21,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/1.0.xml,1.0.xml,bind\(.*\),     bind(Foo.class).to(FooImpl.class).in(Scopes.SINGLETON);,152
+22,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/1.0.xml,1.0.xml,bind\(.*\),     bind(BarImpl.class);,153
+23,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/1.0.xml,1.0.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",1413
+24,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/1.0.xml,1.0.xml,bind\(.*\), bind(DataSource.class),1940
+25,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+26,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+27,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+28,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,270
+29,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,271
+30,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,272
+31,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,602
+32,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,612
+33,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,623
+34,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,639
+35,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,648
+36,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,650
+37,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),670
+38,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,682
+39,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,684
+40,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,708
+41,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Service.class),717
+42,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),"     <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()}",804
+43,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,807
+44,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,1771
+45,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,1780
+46,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,1789
+47,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,1966
+48,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,1972
+49,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),   bind(FooImpl.class);,1997
+50,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,2535
+51,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",2928
+52,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in",3640
+53,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,3736
+54,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\), bind(DataSource.class),6009
+55,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/2.0.xml,2.0.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",6128
+56,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+57,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+58,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+59,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,270
+60,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,271
+61,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,272
+62,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\)," <code>bind(Foo.class).to(FooImpl.class)</code>) are allowed, but the",592
+63,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\), it is also explicitly bound (<code>bind(FooImpl.class)</code>).,594
+64,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,653
+65,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,663
+66,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,674
+67,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,690
+68,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,699
+69,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,701
+70,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),721
+71,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,733
+72,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,735
+73,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,759
+74,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Service.class),768
+75,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(ServiceImpl.class),781
+76,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),"     <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()}",866
+77,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,869
+78,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,1952
+79,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,1961
+80,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,1970
+81,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,2147
+82,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,2153
+83,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),   bind(FooImpl.class);,2178
+84,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,3196
+85,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",5350
+86,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in",6743
+87,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,6841
+88,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\), bind(DataSource.class),9592
+89,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/3.0.xml,3.0.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",9846
+90,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+91,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+92,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+93,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,281
+94,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,282
+95,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,283
+96,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\)," (<code>bind(Foo.class).to(FooImpl.class)</code>) are allowed, but the",639
+97,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\), it is also explicitly bound (<code>bind(FooImpl.class)</code>).,641
+98,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,745
+99,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,755
+100,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,766
+101,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,782
+102,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,791
+103,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,793
+104,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),813
+105,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,825
+106,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,827
+107,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,851
+108,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Service.class),860
+109,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(ServiceImpl.class),873
+110,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),"     <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()}",958
+111,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,961
+112,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,2046
+113,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,2055
+114,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,2064
+115,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,2252
+116,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,2258
+117,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),   bind(FooImpl.class);,2283
+118,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,3347
+119,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\), {@code bind(Integer.class).toInstance(42)} produces two nodes: an,4579
+120,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",5386
+121,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),     bind(Renamer.class).to(ReplacingRenamer.class);,6340
+122,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),"     bind(Key.get(String.class, LookupUrl.class)).toInstance(CUSTOM_LOOKUP_URL);",6386
+123,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in",7275
+124,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,7373
+125,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,@Provides," example, if the element is created from a method annotated by {@literal @Provides}, the",8712
+126,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),"  0 - Binder.bind(),",8736
+127,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,@Provides," the element is created from a method annotated by {@literal @Provides}, the",8776
+128,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,@Provides," as providers, similar to {@code @Provides} methods.",9704
+129,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,@Provides,"      <![CDATA[Returns the annotation that caused this binding to be created. For {@code @Provides} methods,",10090
+130,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,@Provides, this is an instance of the {@code @Provides} annotation. For bindings from,10091
+131,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,@Provides, {@code @Provides} will be visited through this interface.,10123
+132,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\), bind(DataSource.class),10810
+133,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\)," For example, {@code bind(Foo.class).annotatedWith(BarAnnotation.class).toInstance(theValue)}.",11008
+134,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),   // bind(new TypeLiteral{@code <List<Object>>}() {}).toInstance(listOfObjects);,11023
+135,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),   // bind(String.class).toProvider(new Provider() { public String get() { return userName; }});,11026
+136,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),   // bind(SuperClass.class).toInstance(aSubClass);,11029
+137,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),   // bind(Object.class).annotatedWith(MyBindingAnnotation.class).toInstance(object2);,11032
+138,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),   // bind(Object.class).toProvider(myProvider);,11037
+139,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11110
+140,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),"      deprecated=""Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead."">",11176
+141,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),"      <![CDATA[@deprecated Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead.]]>",11180
+142,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11208
+143,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.0.xml,4.0.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11228
+144,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+145,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+146,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+147,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,281
+148,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,282
+149,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,283
+150,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\)," (<code>bind(Foo.class).to(FooImpl.class)</code>) are allowed, but the",639
+151,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\), it is also explicitly bound (<code>bind(FooImpl.class)</code>).,641
+152,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,744
+153,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,754
+154,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,765
+155,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,781
+156,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,790
+157,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,792
+158,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),812
+159,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,824
+160,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,826
+161,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,850
+162,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Service.class),859
+163,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(ServiceImpl.class),872
+164,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),"     <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()}",957
+165,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,960
+166,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,2045
+167,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,2054
+168,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,2063
+169,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,2251
+170,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,2257
+171,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),   bind(FooImpl.class);,2282
+172,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,3346
+173,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\), {@code bind(Integer.class).toInstance(42)} produces two nodes: an,4578
+174,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",5385
+175,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),     bind(Renamer.class).to(ReplacingRenamer.class);,6339
+176,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),"     bind(Key.get(String.class, LookupUrl.class)).toInstance(CUSTOM_LOOKUP_URL);",6385
+177,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in",7310
+178,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,7408
+179,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,@Provides," example, if the element is created from a method annotated by {@literal @Provides}, the",8837
+180,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),"  0 - Binder.bind(),",8861
+181,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,@Provides," the element is created from a method annotated by {@literal @Provides}, the",8901
+182,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,@Provides," as providers, similar to {@code @Provides} methods.",9829
+183,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,@Provides,"      <![CDATA[Returns the annotation that caused this binding to be created. For {@code @Provides} methods,",10215
+184,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,@Provides, this is an instance of the {@code @Provides} annotation. For bindings from,10216
+185,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,@Provides, {@code @Provides} will be visited through this interface.,10248
+186,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\), bind(DataSource.class),10935
+187,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\)," For example, {@code bind(Foo.class).annotatedWith(BarAnnotation.class).toInstance(theValue)}.",11136
+188,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),   // bind(new TypeLiteral{@code <List<Object>>}() {}).toInstance(listOfObjects);,11151
+189,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),   // bind(String.class).toProvider(new Provider() { public String get() { return userName; }});,11154
+190,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),   // bind(SuperClass.class).toInstance(aSubClass);,11157
+191,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),   // bind(String.class).annotatedWith(MyBindingAnnotation.class).toInstance(myString);,11160
+192,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),   // bind(Object.class).toProvider(myProvider);,11165
+193,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11238
+194,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),"      deprecated=""Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead."">",11304
+195,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),"      <![CDATA[@deprecated Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead.]]>",11308
+196,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11336
+197,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.1.xml,4.1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11356
+198,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+199,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+200,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+201,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,276
+202,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,277
+203,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,278
+204,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\)," a linked binding (<code>bind(Foo.class).to(FooImpl.class)</code>) are allowed, but the implicit",622
+205,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\), <code>bind(FooImpl.class)</code>).,624
+206,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,720
+207,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,729
+208,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,738
+209,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,751
+210,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,759
+211,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,761
+212,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),779
+213,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,789
+214,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,791
+215,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,813
+216,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Service.class),821
+217,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(ServiceImpl.class),833
+218,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\)," <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()} statements:",915
+219,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,917
+220,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,1974
+221,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,1983
+222,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,1992
+223,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,2182
+224,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,2188
+225,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),   bind(FooImpl.class);,2214
+226,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,3272
+227,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\), bind(Integer.class).toInstance(42)} produces two nodes: an interface node with the key of {@code,4510
+228,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",5308
+229,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),     bind(Renamer.class).to(ReplacingRenamer.class);,6306
+230,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),"     bind(Key.get(String.class, LookupUrl.class)).toInstance(CUSTOM_LOOKUP_URL);",6358
+231,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in your",7269
+232,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,7374
+233,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,@Provides," created from a method annotated by {@literal @Provides}, the declaring source of element would",8790
+234,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),   <li>{@code Binder.bind()},8814
+235,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,@Provides," annotated by {@literal @Provides}, the declaring source of element would be the method itself.",8853
+236,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,@Provides, similar to {@code @Provides} methods.,9775
+237,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,@Provides,"      <![CDATA[Returns the annotation that caused this binding to be created. For {@code @Provides} methods,",10160
+238,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,@Provides, this is an instance of the {@code @Provides} annotation. For bindings from {@link,10161
+239,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,@Provides, created by using {@code @Provides} will be visited through this interface.,10193
+240,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\), bind(DataSource.class),10942
+241,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),       bind(Foo.class).annotatedWith(BarAnnotation.class).toInstance(theValue)}. It is an error to,11167
+242,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),   // bind(new TypeLiteral{@code <List<Object>>}() {}).toInstance(listOfObjects);,11179
+243,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),   // bind(String.class).toProvider(new Provider() { public String get() { return userName; }});,11183
+244,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),   // bind(SuperClass.class).toInstance(aSubClass);,11186
+245,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),   // bind(String.class).annotatedWith(MyBindingAnnotation.class).toInstance(myString);,11189
+246,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),   // bind(Object.class).toProvider(myProvider);,11194
+247,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11462
+248,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),"      deprecated=""Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead."">",11530
+249,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),"      <![CDATA[@deprecated Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead.]]>",11534
+250,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11563
+251,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.1.xml,4.2.1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11587
+252,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+253,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+254,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+255,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,276
+256,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,277
+257,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,278
+258,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\)," a linked binding (<code>bind(Foo.class).to(FooImpl.class)</code>) are allowed, but the implicit",622
+259,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\), <code>bind(FooImpl.class)</code>).,624
+260,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,720
+261,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,729
+262,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,738
+263,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,751
+264,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,759
+265,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,761
+266,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),779
+267,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,789
+268,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,791
+269,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,813
+270,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Service.class),821
+271,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(ServiceImpl.class),833
+272,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\)," <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()} statements:",915
+273,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,917
+274,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,1974
+275,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,1983
+276,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,1992
+277,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,2182
+278,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,2188
+279,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),   bind(FooImpl.class);,2214
+280,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,3272
+281,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\), bind(Integer.class).toInstance(42)} produces two nodes: an interface node with the key of {@code,4510
+282,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",5308
+283,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),     bind(Renamer.class).to(ReplacingRenamer.class);,6306
+284,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),"     bind(Key.get(String.class, LookupUrl.class)).toInstance(CUSTOM_LOOKUP_URL);",6358
+285,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in your",7269
+286,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,7374
+287,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,@Provides," created from a method annotated by {@literal @Provides}, the declaring source of element would",8790
+288,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),   <li>{@code Binder.bind()},8814
+289,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,@Provides," annotated by {@literal @Provides}, the declaring source of element would be the method itself.",8853
+290,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,@Provides, similar to {@code @Provides} methods.,9775
+291,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,@Provides,"      <![CDATA[Returns the annotation that caused this binding to be created. For {@code @Provides} methods,",10160
+292,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,@Provides, this is an instance of the {@code @Provides} annotation. For bindings from {@link,10161
+293,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,@Provides, created by using {@code @Provides} will be visited through this interface.,10193
+294,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\), bind(DataSource.class),10942
+295,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),       bind(Foo.class).annotatedWith(BarAnnotation.class).toInstance(theValue)}. It is an error to,11167
+296,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),   // bind(new TypeLiteral{@code <List<Object>>}() {}).toInstance(listOfObjects);,11179
+297,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),   // bind(String.class).toProvider(new Provider() { public String get() { return userName; }});,11183
+298,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),   // bind(SuperClass.class).toInstance(aSubClass);,11186
+299,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),   // bind(String.class).annotatedWith(MyBindingAnnotation.class).toInstance(myString);,11189
+300,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),   // bind(Object.class).toProvider(myProvider);,11194
+301,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11462
+302,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),"      deprecated=""Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead."">",11530
+303,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),"      <![CDATA[@deprecated Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead.]]>",11534
+304,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11563
+305,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.2.xml,4.2.2.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11587
+306,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+307,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+308,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+309,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,276
+310,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,277
+311,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,278
+312,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\)," a linked binding (<code>bind(Foo.class).to(FooImpl.class)</code>) are allowed, but the implicit",622
+313,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\), <code>bind(FooImpl.class)</code>).,624
+314,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,720
+315,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,729
+316,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,738
+317,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,751
+318,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,759
+319,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,761
+320,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),779
+321,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,789
+322,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,791
+323,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,813
+324,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Service.class),821
+325,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(ServiceImpl.class),833
+326,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\)," <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()} statements:",915
+327,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,917
+328,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,2020
+329,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,2029
+330,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,2038
+331,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,2228
+332,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,2234
+333,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),   bind(FooImpl.class);,2260
+334,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,3318
+335,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\), bind(Integer.class).toInstance(42)} produces two nodes: an interface node with the key of {@code,4562
+336,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",5360
+337,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),     bind(Renamer.class).to(ReplacingRenamer.class);,6394
+338,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),"     bind(Key.get(String.class, LookupUrl.class)).toInstance(CUSTOM_LOOKUP_URL);",6446
+339,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in your",7371
+340,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,7476
+341,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,@Provides," created from a method annotated by {@literal @Provides}, the declaring source of element would",8892
+342,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),   <li>{@code Binder.bind()},8916
+343,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,@Provides," annotated by {@literal @Provides}, the declaring source of element would be the method itself.",8955
+344,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,@ProvidesIntoSet, {@code @ProvidesIntoSet String provideFoo()} to bind into a unique Key within the multibinder,9910
+345,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,@Provides, {@code @ProvidesIntoSet String provideFoo()} to bind into a unique Key within the multibinder,9910
+346,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,@Provides, similar to {@code @Provides} methods.,9925
+347,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,@Provides,"      <![CDATA[Returns the annotation that caused this binding to be created. For {@code @Provides} methods,",10326
+348,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,@Provides, this is an instance of the {@code @Provides} annotation. For bindings from {@link,10327
+349,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,@Provides, created by using {@code @Provides} will be visited through this interface.,10359
+350,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\), bind(DataSource.class),11124
+351,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),       bind(Foo.class).annotatedWith(BarAnnotation.class).toInstance(theValue)}. It is an error to,11349
+352,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),   // bind(new TypeLiteral{@code <List<Object>>}() {}).toInstance(listOfObjects);,11361
+353,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),   // bind(String.class).toProvider(new Provider() { public String get() { return userName; }});,11365
+354,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),   // bind(SuperClass.class).toInstance(aSubClass);,11368
+355,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),   // bind(String.class).annotatedWith(MyBindingAnnotation.class).toInstance(myString);,11371
+356,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),   // bind(Object.class).toProvider(myProvider);,11376
+357,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11644
+358,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),"      deprecated=""Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead."">",11712
+359,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),"      <![CDATA[@deprecated Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead.]]>",11716
+360,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11745
+361,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.3.xml,4.2.3.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11769
+362,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+363,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+364,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+365,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,276
+366,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,277
+367,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,278
+368,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\)," a linked binding (<code>bind(Foo.class).to(FooImpl.class)</code>) are allowed, but the implicit",622
+369,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\), <code>bind(FooImpl.class)</code>).,624
+370,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,720
+371,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,729
+372,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,738
+373,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,751
+374,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,759
+375,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,761
+376,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),779
+377,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,789
+378,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,791
+379,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,813
+380,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Service.class),821
+381,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(ServiceImpl.class),833
+382,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\)," <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()} statements:",915
+383,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,917
+384,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,1974
+385,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,1983
+386,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,1992
+387,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,2182
+388,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,2188
+389,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),   bind(FooImpl.class);,2214
+390,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,3272
+391,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\), bind(Integer.class).toInstance(42)} produces two nodes: an interface node with the key of {@code,4510
+392,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",5308
+393,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),     bind(Renamer.class).to(ReplacingRenamer.class);,6306
+394,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),"     bind(Key.get(String.class, LookupUrl.class)).toInstance(CUSTOM_LOOKUP_URL);",6358
+395,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in your",7269
+396,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,7374
+397,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,@Provides," created from a method annotated by {@literal @Provides}, the declaring source of element would",8790
+398,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),   <li>{@code Binder.bind()},8814
+399,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,@Provides," annotated by {@literal @Provides}, the declaring source of element would be the method itself.",8853
+400,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,@Provides, similar to {@code @Provides} methods.,9775
+401,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,@Provides,"      <![CDATA[Returns the annotation that caused this binding to be created. For {@code @Provides} methods,",10160
+402,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,@Provides, this is an instance of the {@code @Provides} annotation. For bindings from {@link,10161
+403,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,@Provides, created by using {@code @Provides} will be visited through this interface.,10193
+404,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\), bind(DataSource.class),10942
+405,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),       bind(Foo.class).annotatedWith(BarAnnotation.class).toInstance(theValue)}. It is an error to,11142
+406,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),   // bind(new TypeLiteral{@code <List<Object>>}() {}).toInstance(listOfObjects);,11154
+407,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),   // bind(String.class).toProvider(new Provider() { public String get() { return userName; }});,11158
+408,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),   // bind(SuperClass.class).toInstance(aSubClass);,11161
+409,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),   // bind(String.class).annotatedWith(MyBindingAnnotation.class).toInstance(myString);,11164
+410,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),   // bind(Object.class).toProvider(myProvider);,11169
+411,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11372
+412,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),"      deprecated=""Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead."">",11440
+413,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),"      <![CDATA[@deprecated Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead.]]>",11444
+414,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11473
+415,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/4.2.xml,4.2.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11497
+416,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+417,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+418,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+419,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,275
+420,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,276
+421,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,277
+422,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\)," a linked binding (<code>bind(Foo.class).to(FooImpl.class)</code>) are allowed, but the implicit",623
+423,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\), <code>bind(FooImpl.class)</code>).,625
+424,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,721
+425,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,730
+426,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,739
+427,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,752
+428,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,760
+429,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,762
+430,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),780
+431,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,790
+432,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,792
+433,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,814
+434,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class),822
+435,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(ServiceImpl.class),834
+436,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\)," <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()} statements:",916
+437,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,918
+438,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,2049
+439,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,2058
+440,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,2067
+441,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,2257
+442,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,2263
+443,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   bind(FooImpl.class);,2289
+444,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides,   @Provides,2457
+445,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,3439
+446,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\), bind(Integer.class).toInstance(42)} produces two nodes: an interface node with the key of {@code,4733
+447,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",5531
+448,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Renamer.class).to(ReplacingRenamer.class);,6566
+449,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"     bind(Key.get(String.class, LookupUrl.class)).toInstance(CUSTOM_LOOKUP_URL);",6618
+450,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in your",7543
+451,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,7648
+452,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides," created from a method annotated by {@literal @Provides}, the declaring source of element would",9087
+453,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   <li>{@code Binder.bind()},9111
+454,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides," annotated by {@literal @Provides}, the declaring source of element would be the method itself.",9150
+455,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@ProvidesIntoSet, {@code @ProvidesIntoSet String provideFoo()} to bind into a unique Key within the multibinder,10292
+456,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides, {@code @ProvidesIntoSet String provideFoo()} to bind into a unique Key within the multibinder,10292
+457,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides, similar to {@code @Provides} methods.,10309
+458,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides,"      <![CDATA[Returns the annotation that caused this binding to be created. For {@code @Provides} methods,",10710
+459,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides, this is an instance of the {@code @Provides} annotation. For bindings from {@link,10711
+460,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides, created by using {@code @Provides} will be visited through this interface.,10743
+461,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\), bind(DataSource.class),11438
+462,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),       bind(Foo.class).annotatedWith(BarAnnotation.class).toInstance(theValue)}. It is an error to,11662
+463,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(new TypeLiteral{@code <List<Object>>}() {}).toInstance(listOfObjects);,11674
+464,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(String.class).toProvider(new Provider() { public String get() { return userName; }});,11678
+465,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(SuperClass.class).toInstance(aSubClass);,11681
+466,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(String.class).annotatedWith(MyBindingAnnotation.class).toInstance(myString);,11684
+467,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(Object.class).toProvider(myProvider);,11689
+468,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11982
+469,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"      deprecated=""Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead."">",12050
+470,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"      <![CDATA[@deprecated Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead.]]>",12054
+471,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",12083
+472,ed6993aa14a4010904ea794ba7623a6f4486fe21,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",12107
+473,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,62
+474,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,71
+475,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,80
+476,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class).in(Singleton.class);,275
+477,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(CreditCardPaymentService.class);,276
+478,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(PaymentService.class).to(CreditCardPaymentService.class);,277
+479,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\)," a linked binding (<code>bind(Foo.class).to(FooImpl.class)</code>) are allowed, but the implicit",623
+480,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\), <code>bind(FooImpl.class)</code>).,625
+481,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(ServiceImpl.class);</pre>,721
+482,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).to(ServiceImpl.class);</pre>,730
+483,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).toProvider(ServiceProvider.class);</pre>,739
+484,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);</pre>,752
+485,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(ServiceImpl.class).in(Singleton.class);,760
+486,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(ServiceImpl.class).in(Scopes.SINGLETON);</pre>,762
+487,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(new TypeLiteral&lt;PaymentService&lt;CreditCard>>() {}),780
+488,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).toInstance(new ServiceImpl());,790
+489,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).toInstance(SomeLegacyRegistry.getService());</pre>,792
+490,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).annotatedWith(red).to(RedService.class);</pre>,814
+491,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class),822
+492,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(ServiceImpl.class),834
+493,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\)," <li>Explicitly in a module, via {@code bind()} and {@code bindConstant()} statements:",916
+494,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Service.class).annotatedWith(Red.class).to(ServiceImpl.class);,918
+495,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Key)]]>,2049
+496,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(TypeLiteral)]]>,2058
+497,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),      <![CDATA[@see Binder#bind(Class)]]>,2067
+498,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Foo.class).to(RealFoo.class);,2257
+499,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(SomeImplementationDetail.class);,2263
+500,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   bind(FooImpl.class);,2289
+501,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides,   @Provides,2457
+502,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\), <pre>bind(PaymentFactory.class).toProvider(,3439
+503,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\), bind(Integer.class).toInstance(42)} produces two nodes: an interface node with the key of {@code,4733
+504,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\)," bind(DataSource.class).toProvider(fromJndi(DataSource.class, ""java:...""));",5531
+505,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),     bind(Renamer.class).to(ReplacingRenamer.class);,6566
+506,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"     bind(Key.get(String.class, LookupUrl.class)).toInstance(CUSTOM_LOOKUP_URL);",6618
+507,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\)," directly, you should add a separate {@code bind(..).in(Singleton.class)} rule elsewhere in your",7543
+508,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   bind(Filter.class)<b>.annotatedWith(Fave.class)</b>.to(MyFilterImpl.class);,7648
+509,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides," created from a method annotated by {@literal @Provides}, the declaring source of element would",9087
+510,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   <li>{@code Binder.bind()},9111
+511,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides," annotated by {@literal @Provides}, the declaring source of element would be the method itself.",9150
+512,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@ProvidesIntoSet, {@code @ProvidesIntoSet String provideFoo()} to bind into a unique Key within the multibinder,10292
+513,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides, {@code @ProvidesIntoSet String provideFoo()} to bind into a unique Key within the multibinder,10292
+514,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides, similar to {@code @Provides} methods.,10309
+515,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides,"      <![CDATA[Returns the annotation that caused this binding to be created. For {@code @Provides} methods,",10710
+516,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides, this is an instance of the {@code @Provides} annotation. For bindings from {@link,10711
+517,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,@Provides, created by using {@code @Provides} will be visited through this interface.,10743
+518,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\), bind(DataSource.class),11438
+519,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),       bind(Foo.class).annotatedWith(BarAnnotation.class).toInstance(theValue)}. It is an error to,11662
+520,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(new TypeLiteral{@code <List<Object>>}() {}).toInstance(listOfObjects);,11674
+521,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(String.class).toProvider(new Provider() { public String get() { return userName; }});,11678
+522,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(SuperClass.class).toInstance(aSubClass);,11681
+523,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(String.class).annotatedWith(MyBindingAnnotation.class).toInstance(myString);,11684
+524,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),   // bind(Object.class).toProvider(myProvider);,11689
+525,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",11982
+526,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"      deprecated=""Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead."">",12050
+527,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"      <![CDATA[@deprecated Use {@link #bind(Class, Class)} or {@link #bind(Class, TypeLiteral)} instead.]]>",12054
+528,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",12083
+529,383d3774367a8276db8c495ad632133fab227894,latest-api-diffs/5.0.0-BETA-1.xml,5.0.0-BETA-1.xml,bind\(.*\),"    .bind(RemoteProvider.class, Customer.class)",12107
+530,f3f8fc0c7cc2bf5ea1596f7adee7f514d6cf01e8,core/src/com/google/inject/AbstractModule.java,AbstractModule.java,@Provides," * <p>Simply extend this class, then you can add bindings by either defining @Provides methods (see",37
+531,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/BindingAlreadySetErrorTest.java,BindingAlreadySetErrorTest.java,@Provides,    @Provides,41
+532,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/BindingAlreadySetErrorTest.java,BindingAlreadySetErrorTest.java,bind\(.*\),      bind(First.class);,50
+533,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/BindingAlreadySetErrorTest.java,BindingAlreadySetErrorTest.java,bind\(.*\),      bind(Second.class);,51
+534,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(Foo.class).to(SubFoo.class);,43
+535,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,@Provides,    @Provides,60
+536,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(Bar.class);,88
+537,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(Foo.class).to(SubFoo.class);,105
+538,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(DependsOnFoo.class).toInstance(new DependsOnFoo(new Foo()));,114
+539,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,36
+540,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,36
+541,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,41
+542,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,41
+543,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,98
+544,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,98
+545,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,104
+546,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,104
+547,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,110
+548,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,110
+549,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,116
+550,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,116
+551,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @Provides,47
+552,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,55
+553,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,55
+554,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,61
+555,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,61
+556,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,83
+557,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,83
+558,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,111
+559,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,111
+560,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,117
+561,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,117
+562,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ErrorMessagesTest.java,ErrorMessagesTest.java,@Provides,    @Provides,47
+563,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ErrorMessagesTest.java,ErrorMessagesTest.java,@Provides,    @Provides,52
+564,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/GenericErrorTest.java,GenericErrorTest.java,@Provides,    @Provides,44
+565,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/GenericErrorTest.java,GenericErrorTest.java,@Provides,    @Provides,49
+566,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,@Provides,    @Provides,54
+567,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,@Provides,    @Provides,80
+568,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,bind\(.*\),      bind(DependsOnMissingNoArgConstructor.class);,107
+569,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,@Provides,    @Provides,110
+570,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,bind\(.*\),      bind(DependsOnMissingBindings.class);,75
+571,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,bind\(.*\),      bind(Server.class);,90
+572,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,@Provides,    @Provides,124
+573,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,@Provides,    @Provides,131
+574,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,@Provides,    @Provides,137
+575,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ScopeNotFoundErrorTest.java,ScopeNotFoundErrorTest.java,bind\(.*\),      bind(BatchHelper.class).in(BatchScoped.class);,46
+576,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ScopeNotFoundErrorTest.java,ScopeNotFoundErrorTest.java,bind\(.*\),      bind(RequestHelper.class);,47
+577,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/errors/ScopeNotFoundErrorTest.java,ScopeNotFoundErrorTest.java,@Provides,    @Provides,50
+578,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",761
+579,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",783
+580,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",803
+581,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",824
+582,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",844
+583,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",865
+584,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: """,897
+585,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".rawProvider()"",",945
+586,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + GenericSuperModule.class.getName() + "".provide()"",",979
+587,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",759
+588,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",781
+589,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",801
+590,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",822
+591,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",842
+592,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",863
+593,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.annotatedGenericProviderMethod()"",",895
+594,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.rawProvider()"",",941
+595,5caa5493958d40f597b4419c5027c61ce13ceaf7,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$GenericSuperModule.provide()"",",975
+596,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/BindingAlreadySetErrorTest.java,BindingAlreadySetErrorTest.java,@Provides,    @Provides,41
+597,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/BindingAlreadySetErrorTest.java,BindingAlreadySetErrorTest.java,bind\(.*\),      bind(First.class);,50
+598,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/BindingAlreadySetErrorTest.java,BindingAlreadySetErrorTest.java,bind\(.*\),      bind(Second.class);,51
+599,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(Foo.class).to(SubFoo.class);,43
+600,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,@Provides,    @Provides,60
+601,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(Bar.class);,88
+602,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(Foo.class).to(SubFoo.class);,105
+603,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(DependsOnFoo.class).toInstance(new DependsOnFoo(new Foo()));,114
+604,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,36
+605,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,36
+606,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,41
+607,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,41
+608,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,98
+609,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,98
+610,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,104
+611,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,104
+612,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,110
+613,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,110
+614,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,116
+615,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,116
+616,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @Provides,47
+617,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,55
+618,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,55
+619,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,61
+620,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,61
+621,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,83
+622,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,83
+623,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,111
+624,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,111
+625,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,117
+626,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,117
+627,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ErrorMessagesTest.java,ErrorMessagesTest.java,@Provides,    @Provides,47
+628,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ErrorMessagesTest.java,ErrorMessagesTest.java,@Provides,    @Provides,52
+629,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/GenericErrorTest.java,GenericErrorTest.java,@Provides,    @Provides,44
+630,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/GenericErrorTest.java,GenericErrorTest.java,@Provides,    @Provides,49
+631,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,@Provides,    @Provides,54
+632,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,@Provides,    @Provides,80
+633,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,bind\(.*\),      bind(DependsOnMissingNoArgConstructor.class);,107
+634,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,@Provides,    @Provides,110
+635,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,bind\(.*\),      bind(DependsOnMissingBindings.class);,75
+636,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,bind\(.*\),      bind(Server.class);,90
+637,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,@Provides,    @Provides,124
+638,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,@Provides,    @Provides,131
+639,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,@Provides,    @Provides,137
+640,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ScopeNotFoundErrorTest.java,ScopeNotFoundErrorTest.java,bind\(.*\),      bind(BatchHelper.class).in(BatchScoped.class);,46
+641,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ScopeNotFoundErrorTest.java,ScopeNotFoundErrorTest.java,bind\(.*\),      bind(RequestHelper.class);,47
+642,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/errors/ScopeNotFoundErrorTest.java,ScopeNotFoundErrorTest.java,@Provides,    @Provides,50
+643,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",759
+644,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",781
+645,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",801
+646,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",822
+647,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",842
+648,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",863
+649,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.annotatedGenericProviderMethod()"",",895
+650,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.rawProvider()"",",941
+651,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$GenericSuperModule.provide()"",",975
+652,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",761
+653,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",783
+654,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",803
+655,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",824
+656,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",844
+657,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",865
+658,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: """,897
+659,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".rawProvider()"",",945
+660,9a8e46716e4c78122308ac8ac23b4e3f8139debb,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + GenericSuperModule.class.getName() + "".provide()"",",979
+661,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/BindingAlreadySetErrorTest.java,BindingAlreadySetErrorTest.java,@Provides,    @Provides,41
+662,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/BindingAlreadySetErrorTest.java,BindingAlreadySetErrorTest.java,bind\(.*\),      bind(First.class);,50
+663,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/BindingAlreadySetErrorTest.java,BindingAlreadySetErrorTest.java,bind\(.*\),      bind(Second.class);,51
+664,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(Foo.class).to(SubFoo.class);,43
+665,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,@Provides,    @Provides,60
+666,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(Bar.class);,88
+667,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(Foo.class).to(SubFoo.class);,105
+668,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ChildBindingAlreadySetErrorTest.java,ChildBindingAlreadySetErrorTest.java,bind\(.*\),      bind(DependsOnFoo.class).toInstance(new DependsOnFoo(new Foo()));,114
+669,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,36
+670,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,36
+671,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,41
+672,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,41
+673,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,98
+674,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,98
+675,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,104
+676,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,104
+677,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,110
+678,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,110
+679,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@ProvidesIntoSet,    @ProvidesIntoSet,116
+680,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateElementErrorTest.java,DuplicateElementErrorTest.java,@Provides,    @ProvidesIntoSet,116
+681,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @Provides,47
+682,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,55
+683,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,55
+684,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,61
+685,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,61
+686,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,83
+687,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,83
+688,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,111
+689,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,111
+690,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@ProvidesIntoMap,    @ProvidesIntoMap,117
+691,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/DuplicateMapKeyErrorTest.java,DuplicateMapKeyErrorTest.java,@Provides,    @ProvidesIntoMap,117
+692,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ErrorMessagesTest.java,ErrorMessagesTest.java,@Provides,    @Provides,47
+693,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ErrorMessagesTest.java,ErrorMessagesTest.java,@Provides,    @Provides,52
+694,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/GenericErrorTest.java,GenericErrorTest.java,@Provides,    @Provides,44
+695,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/GenericErrorTest.java,GenericErrorTest.java,@Provides,    @Provides,49
+696,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,@Provides,    @Provides,54
+697,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,@Provides,    @Provides,80
+698,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,bind\(.*\),      bind(DependsOnMissingNoArgConstructor.class);,107
+699,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/MissingConstructorErrorTest.java,MissingConstructorErrorTest.java,@Provides,    @Provides,110
+700,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,bind\(.*\),      bind(DependsOnMissingBindings.class);,75
+701,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,bind\(.*\),      bind(Server.class);,90
+702,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,@Provides,    @Provides,124
+703,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,@Provides,    @Provides,131
+704,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/MissingImplementationErrorTest.java,MissingImplementationErrorTest.java,@Provides,    @Provides,137
+705,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ScopeNotFoundErrorTest.java,ScopeNotFoundErrorTest.java,bind\(.*\),      bind(BatchHelper.class).in(BatchScoped.class);,46
+706,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ScopeNotFoundErrorTest.java,ScopeNotFoundErrorTest.java,bind\(.*\),      bind(RequestHelper.class);,47
+707,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/errors/ScopeNotFoundErrorTest.java,ScopeNotFoundErrorTest.java,@Provides,    @Provides,50
+708,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",761
+709,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",783
+710,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",803
+711,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",824
+712,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",844
+713,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".providerMethod()"",",865
+714,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: """,897
+715,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + SuperClassModule.class.getName() + "".rawProvider()"",",945
+716,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: "" + GenericSuperModule.class.getName() + "".provide()"",",979
+717,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",759
+718,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",781
+719,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",801
+720,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",822
+721,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",842
+722,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.providerMethod()"",",863
+723,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.annotatedGenericProviderMethod()"",",895
+724,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$SuperClassModule.rawProvider()"",",941
+725,2c8c7fed126376167126df0da740b3cff0c26469,core/test/com/google/inject/spi/ProviderMethodsTest.java,ProviderMethodsTest.java,@Provides,"          ""@Provides method: ProviderMethodsTest$GenericSuperModule.provide()"",",975
+726,dd873be40013bffbe07552367326bd2b60eaa807,core/test/com/google/inject/IntegrationTest.java,IntegrationTest.java,bind\(.*\),                bind(Foo.class);,42
+727,dd873be40013bffbe07552367326bd2b60eaa807,core/test/com/google/inject/IntegrationTest.java,IntegrationTest.java,bind\(.*\),            bind(Foo.class);,44

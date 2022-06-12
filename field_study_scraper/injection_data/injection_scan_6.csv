@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,action,change,line
+0,4c573990c3f0d92b9696c7957ca318db62f26f10,tutorials/katacoda/command-vmtool-cn/vmtool-spring.md,vmtool-spring.md,1,"    @BeanNameUrlHandlerMapping[org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping@68c0a39c],",52
+1,4c573990c3f0d92b9696c7957ca318db62f26f10,tutorials/katacoda/command-vmtool-en/vmtool-spring.md,vmtool-spring.md,1,"    @BeanNameUrlHandlerMapping[org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping@68c0a39c],",52

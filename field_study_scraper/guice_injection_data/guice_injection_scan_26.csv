@@ -1,0 +1,4 @@
+,commit_hash,file_path,filename,reason,change,line
+0,e37a7b79cbca3eb35423237a580028000038c011,zipkin-storage/cassandra-v1/src/main/java/zipkin2/storage/cassandra/v1/LazySession.java,LazySession.java,bind\(.*\),    return session.execute(healthCheck.bind());,53
+1,e37a7b79cbca3eb35423237a580028000038c011,zipkin-storage/cassandra-v1/src/main/java/zipkin2/storage/cassandra/v1/SelectServiceNames.java,SelectServiceNames.java,bind\(.*\),    return factory.session.executeAsync(factory.preparedStatement.bind());,50
+2,e37a7b79cbca3eb35423237a580028000038c011,zipkin-storage/cassandra-v1/src/test/java/zipkin2/storage/cassandra/v1/InternalForTests.java,InternalForTests.java,bind\(.*\),"    storage.session().execute(prepared.bind(Instant.ofEpochMilli(midnightUTC), thrift));",75

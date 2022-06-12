@@ -1,0 +1,4 @@
+,commit_hash,file_path,filename,action,change,line
+0,dfb12eadd91b5c01eba4df7d72ef0a81c4382e8b,docs/oauth2.md,oauth2.md,4,"The `@EnableAuthorizationServer` annotation is used to configure the OAuth 2.0 Authorization Server mechanism, together with any `@Beans` that implement `AuthorizationServerConfigurer` (there is a handy adapter implementation with empty methods). The following features are delegated to separate configurers that are created by Spring and passed into the `AuthorizationServerConfigurer`:",42
+1,dfb12eadd91b5c01eba4df7d72ef0a81c4382e8b,docs/oauth2.md,oauth2.md,4,@Bean,233
+2,dfb12eadd91b5c01eba4df7d72ef0a81c4382e8b,docs/oauth2.md,oauth2.md,4,@Bean,260

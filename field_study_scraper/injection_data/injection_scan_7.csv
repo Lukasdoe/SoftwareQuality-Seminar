@@ -1,0 +1,24 @@
+,commit_hash,file_path,filename,action,change,line
+0,4a28fbd500d7d679d2141deedf6bd71c37bad2b6,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/util/checker/AuthUserPasswordChecker.java,AuthUserPasswordChecker.java,1,@Component,25
+1,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,104
+2,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,112
+3,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,120
+4,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,129
+5,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,150
+6,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,172
+7,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,189
+8,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,194
+9,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,221
+10,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,226
+11,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/EmailConfiguration.java,EmailConfiguration.java,5,    @Bean,41
+12,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/EmailConfiguration.java,EmailConfiguration.java,5,    @Bean,46
+13,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/MQConfiguration.java,MQConfiguration.java,5,    @Bean,34
+14,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/ctrip/BizLoggingCustomizer.java,BizLoggingCustomizer.java,4,@Component,24
+15,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/ctrip/WebContextConfiguration.java,WebContextConfiguration.java,4,  @Bean,41
+16,9f072d823a1eb18fb9105f182622dfa490a9991b,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/ctrip/WebContextConfiguration.java,WebContextConfiguration.java,4,  @Bean,57
+17,72a04989d049e182dd409e2a76e5c0e4448a8a2d,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,245
+18,72a04989d049e182dd409e2a76e5c0e4448a8a2d,apollo-portal/src/main/java/com/ctrip/framework/apollo/portal/spi/configuration/AuthConfiguration.java,AuthConfiguration.java,5,    @Bean,483
+19,9a6f8e277f678fa583a23f551ed1648d5e13bdfa,apollo-client-config-data/src/main/java/com/ctrip/framework/apollo/config/data/ApolloClientConfigDataAutoConfiguration.java,ApolloClientConfigDataAutoConfiguration.java,1,  @Bean,36
+20,9a6f8e277f678fa583a23f551ed1648d5e13bdfa,apollo-client-config-data/src/main/java/com/ctrip/framework/apollo/config/data/ApolloClientConfigDataAutoConfiguration.java,ApolloClientConfigDataAutoConfiguration.java,1,  @Bean,42
+21,44cf586c4b5b1b9df8c63a49f4b1d3b9d4d01baa,apollo-client/src/test/java/com/ctrip/framework/apollo/spring/JavaConfigAnnotationTest.java,JavaConfigAnnotationTest.java,5,    @Bean,808
+22,44cf586c4b5b1b9df8c63a49f4b1d3b9d4d01baa,apollo-client/src/test/java/com/ctrip/framework/apollo/spring/JavaConfigAnnotationTest.java,JavaConfigAnnotationTest.java,5,    @Bean,817

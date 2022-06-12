@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,reason,change,line
+0,ad59c51fdaf0b5d634d547877595c430ddd33401,motan-transport-netty/src/main/java/com/weibo/api/motan/transport/netty/NettyServer.java,NettyServer.java,bind\(.*\),		serverChannel = bootstrap.bind(new InetSocketAddress(url.getPort()));,97
+1,ad59c51fdaf0b5d634d547877595c430ddd33401,motan-transport-netty/src/main/java/com/weibo/api/motan/transport/netty/NettyServer.java,NettyServer.java,bind\(.*\),        serverChannel = bootstrap.bind(new InetSocketAddress(url.getPort()));,93

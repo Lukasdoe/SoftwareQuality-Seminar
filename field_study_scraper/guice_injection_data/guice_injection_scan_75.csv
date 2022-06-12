@@ -1,0 +1,7 @@
+,commit_hash,file_path,filename,reason,change,line
+0,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/examples/AbstractModule.java,AbstractModule.java,bind\(.*\),    public final <T> AbstractModule bind(Class<T> clazz){,43
+1,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/examples/AbstractModule.java,AbstractModule.java,bind\(.*\),"        bind(clazz, clazz);",47
+2,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/examples/AbstractModule.java,AbstractModule.java,bind\(.*\),"    public final <T> AbstractModule bind(String name, Class<? extends T> implementation){",51
+3,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/examples/AbstractModule.java,AbstractModule.java,bind\(.*\),"    public final <T> AbstractModule bind(String name, T implementation){",56
+4,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/examples/AbstractModule.java,AbstractModule.java,bind\(.*\),"    public final <T> AbstractModule bind(Class<T> iface, Class<? extends T> implementation){",61
+5,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/examples/AbstractModule.java,AbstractModule.java,bind\(.*\),"    public final <T> AbstractModule bind(Class<T> iface, T implementation){",66

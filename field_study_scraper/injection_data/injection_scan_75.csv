@@ -1,0 +1,6 @@
+,commit_hash,file_path,filename,action,change,line
+0,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/main/scala/com/mysema/scalagen/BeanProperties.scala,BeanProperties.scala,4, * BeanProperties turns field + accessor combinations into @BeanProperty annotated,22
+1,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/scalagen/SerializationTest.scala,SerializationTest.scala,4,"    assertContains(sources, ""@BeanProperty"")",69
+2,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/scalagen/SerializationTest.scala,SerializationTest.scala,4,"    assertContains(sources, ""@BeanProperty"")",75
+3,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/scalagen/SerializationTest.scala,SerializationTest.scala,4,"        ""class Immutable(@BeanProperty val firstName: String, @BeanProperty val lastName: String)"",",158
+4,a3d39346539e4912baeac29878157b3bc6c68868,jsonschema2pojo-scalagen/src/test/scala/com/mysema/scalagen/SerializationTest.scala,SerializationTest.scala,4,"        ""class Immutable2(@BeanProperty val firstName: String, @BeanProperty val lastName: String)"")",166

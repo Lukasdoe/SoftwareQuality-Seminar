@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,action,change,line
+0,c85b0a8ed1094e12013259f7a1ca713cd1f806c3,docs/source/about/release-notes.rst,release-notes.rst,5,"* Fix usage ``@SelfValidating`` with ``@BeanParam`` (`#2334 <https://github.com/dropwizard/dropwizard/pull/2334>`_, `#2335 <https://github.com/dropwizard/dropwizard/issues/2335>`_)",23
+1,c85b0a8ed1094e12013259f7a1ca713cd1f806c3,docs/source/about/release-notes.rst,release-notes.rst,5,"* Fix usage ``@SelfValidating`` with ``@BeanParam`` (`#2334 <https://github.com/dropwizard/dropwizard/pull/2334>`__, `#2335 <https://github.com/dropwizard/dropwizard/issues/2335>`__)",23

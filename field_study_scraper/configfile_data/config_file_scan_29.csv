@@ -1,0 +1,6 @@
+,commit_hash,file_path,filename,action,changes
+0,7410560b470fcd2c611cc240b883ace48756264c,src/test/resources/tree/a.txt,a.txt,1,"{'added': [(1, 'a')], 'deleted': []}"
+1,7410560b470fcd2c611cc240b883ace48756264c,src/test/resources/tree/a/b.txt,b.txt,1,"{'added': [(1, 'b')], 'deleted': []}"
+2,7410560b470fcd2c611cc240b883ace48756264c,src/test/resources/tree/a/b/c.txt,c.txt,1,"{'added': [(1, 'c')], 'deleted': []}"
+3,3c7700b229848cef398cf08e98af154ba6ef87ec,src/test/resources/a/a.txt,a.txt,1,"{'added': [(1, 'a')], 'deleted': []}"
+4,3c7700b229848cef398cf08e98af154ba6ef87ec,src/test/resources/b/b.txt,b.txt,1,"{'added': [(1, 'b')], 'deleted': []}"

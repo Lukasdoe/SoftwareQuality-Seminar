@@ -1,0 +1,17 @@
+,commit_hash,file_path,filename,action,change,line
+0,1729ed6500675c4e94a3a3dbb83a354e8cc125cd,spring-boot-modules/spring-boot-actuator/src/main/java/com/baeldung/startup/ResourceInitializer.java,ResourceInitializer.java,1,@Component,8
+1,756fa8d3a99f86e6c80d0b1b2249f24c2eb29788,spring-security-modules/spring-security-web-react/src/main/java/com/baeldung/spring/MvcConfig.java,MvcConfig.java,5,"@ComponentScan(basePackages = { ""com.baeldung.spring"" })",16
+2,1fc112d473e3c7e3f1e68a1bd332f900baaaeee2,ddd/src/main/java/com/baeldung/hexagonal/adapter/BookingPersistenceAdapter.java,BookingPersistenceAdapter.java,4,@Component,9
+3,1fc112d473e3c7e3f1e68a1bd332f900baaaeee2,ddd/src/main/java/com/baeldung/hexagonal/adapter/TheatreServiceAdapter.java,TheatreServiceAdapter.java,4,@Component,16
+4,1fc112d473e3c7e3f1e68a1bd332f900baaaeee2,ddd/src/main/java/com/baeldung/hexagonal/adapter/WalletServiceAdapter.java,WalletServiceAdapter.java,4,@Component,10
+5,1fc112d473e3c7e3f1e68a1bd332f900baaaeee2,ddd/src/main/java/com/baeldung/hexagonal/usecase/BookTicketUseCase.java,BookTicketUseCase.java,4,@Component,17
+6,f5734df43c7fa7409058c6926ff032696753bd36,persistence-modules/spring-boot-persistence/src/main/java/com/baeldung/dsrouting/model/ClientADetails.java,ClientADetails.java,1,@Component,6
+7,f5734df43c7fa7409058c6926ff032696753bd36,persistence-modules/spring-boot-persistence/src/main/java/com/baeldung/dsrouting/model/ClientBDetails.java,ClientBDetails.java,1,@Component,6
+8,f5734df43c7fa7409058c6926ff032696753bd36,persistence-modules/spring-boot-persistence/src/test/java/com/baeldung/dsrouting/SpringBootDataSourceRoutingTestConfiguration.java,SpringBootDataSourceRoutingTestConfiguration.java,1,    @Bean,21
+9,f5734df43c7fa7409058c6926ff032696753bd36,persistence-modules/spring-boot-persistence/src/test/java/com/baeldung/dsrouting/SpringBootDataSourceRoutingTestConfiguration.java,SpringBootDataSourceRoutingTestConfiguration.java,1,    @Bean,26
+10,641a3e408abb9f8964781383e73e1b850e84b144,spring-boot-modules/spring-boot-keycloak/src/main/java/com/baeldung/keycloaksoap/KeycloakSecurityConfig.java,KeycloakSecurityConfig.java,1,    @Bean,43
+11,641a3e408abb9f8964781383e73e1b850e84b144,spring-boot-modules/spring-boot-keycloak/src/main/java/com/baeldung/keycloaksoap/KeycloakSecurityConfig.java,KeycloakSecurityConfig.java,1,    @Bean,49
+12,641a3e408abb9f8964781383e73e1b850e84b144,spring-boot-modules/spring-boot-keycloak/src/main/java/com/baeldung/keycloaksoap/WebServiceConfig.java,WebServiceConfig.java,1,    @Bean,33
+13,641a3e408abb9f8964781383e73e1b850e84b144,spring-boot-modules/spring-boot-keycloak/src/main/java/com/baeldung/keycloaksoap/WebServiceConfig.java,WebServiceConfig.java,1,"    @Bean(name = ""products"")",41
+14,641a3e408abb9f8964781383e73e1b850e84b144,spring-boot-modules/spring-boot-keycloak/src/main/java/com/baeldung/keycloaksoap/WebServiceConfig.java,WebServiceConfig.java,1,    @Bean,51
+15,641a3e408abb9f8964781383e73e1b850e84b144,spring-boot-modules/spring-boot-keycloak/src/main/java/com/baeldung/keycloaksoap/WebServiceConfig.java,WebServiceConfig.java,1,    @Bean,56

@@ -1,0 +1,7 @@
+,commit_hash,file_path,filename,action,change,line
+0,ec1f65f99da578f28529116f090f2c9133d8e1f9,spring-cloud-alibaba-starters/spring-cloud-starter-alibaba-sentinel/src/main/java/com/alibaba/cloud/sentinel/feign/SentinelFeignAutoConfiguration.java,SentinelFeignAutoConfiguration.java,5,	@Bean,44
+1,8542756d90e448262c3e2ba00639429c3266455d,spring-cloud-alibaba-starters/spring-cloud-starter-dubbo/src/main/java/com/alibaba/cloud/dubbo/actuate/DubboMetadataEndpointAutoConfiguration.java,DubboMetadataEndpointAutoConfiguration.java,5,	@Bean,55
+2,4a2f90f13e78d1a5dc8863f97c88a304b397a8ea,spring-cloud-alibaba-starters/spring-cloud-starter-dubbo/src/main/java/com/alibaba/cloud/dubbo/actuate/DubboMetadataEndpointAutoConfiguration.java,DubboMetadataEndpointAutoConfiguration.java,5,	@Bean,55
+3,dfa77475793e94d9c9dd8800852741c8b3cd79fa,spring-cloud-alibaba-starters/spring-cloud-starter-dubbo/src/main/java/com/alibaba/cloud/dubbo/actuate/DubboMetadataEndpointAutoConfiguration.java,DubboMetadataEndpointAutoConfiguration.java,5,	@Bean,48
+4,dfa77475793e94d9c9dd8800852741c8b3cd79fa,spring-cloud-alibaba-starters/spring-cloud-starter-dubbo/src/main/java/com/alibaba/cloud/dubbo/actuate/DubboMetadataEndpointAutoConfiguration.java,DubboMetadataEndpointAutoConfiguration.java,5,	@Bean,55
+5,6c0edee13e32039bc2d65a3f959cd0b20e0468de,spring-cloud-alibaba-starters/spring-cloud-starter-dubbo/src/main/java/com/alibaba/cloud/dubbo/metadata/DubboBootstrapCommandLineRunner.java,DubboBootstrapCommandLineRunner.java,1,@Component,33

@@ -1,0 +1,54 @@
+,commit_hash,file_path,filename,action,change,line
+0,0253039fe0d946b2e289120d1116ac15b344da13,demo-ureport2/README.md,README.md,5,@Component,46
+1,f1655d72309eaf006013f1f7579d973a7d4b5e86,demo-ureport2/src/main/java/com/xkcoding/ureport2/config/InnerDatasource.java,InnerDatasource.java,1,@Component,19
+2,45bcd495651a274e3e7477303936449de2dcea21,demo-template-enjoy/src/main/java/com/xkcoding/template/enjoy/config/EnjoyConfig.java,EnjoyConfig.java,5,"	@Bean(name = ""jfinalViewResolver"")",18
+3,45bcd495651a274e3e7477303936449de2dcea21,demo-template-enjoy/src/main/java/com/xkcoding/template/enjoy/config/EnjoyConfig.java,EnjoyConfig.java,5,"    @Bean(name = ""jfinalViewResolver"")",18
+4,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,	@Bean,52
+5,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,	@Bean(name = DispatcherServlet.MULTIPART_RESOLVER_BEAN_NAME),61
+6,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,	@Bean,72
+7,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,	@Bean,80
+8,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,	@Bean,88
+9,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,	@Bean,96
+10,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,    @Bean,52
+11,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,    @Bean(name = DispatcherServlet.MULTIPART_RESOLVER_BEAN_NAME),61
+12,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,    @Bean,72
+13,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,    @Bean,80
+14,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,    @Bean,88
+15,45bcd495651a274e3e7477303936449de2dcea21,demo-upload/src/main/java/com/xkcoding/upload/config/UploadConfig.java,UploadConfig.java,5,    @Bean,96
+16,72ffe33136fa6fffab0a19afa77c028f45cbc92c,spring-boot-demo-https/README.md,README.md,1,    @Bean,39
+17,72ffe33136fa6fffab0a19afa77c028f45cbc92c,spring-boot-demo-https/README.md,README.md,1,    @Bean,49
+18,72ffe33136fa6fffab0a19afa77c028f45cbc92c,spring-boot-demo-https/src/main/java/com/xkcoding/springbootdemohttps/SpringBootDemoHttpsApplication.java,SpringBootDemoHttpsApplication.java,1,    @Bean,34
+19,72ffe33136fa6fffab0a19afa77c028f45cbc92c,spring-boot-demo-https/src/main/java/com/xkcoding/springbootdemohttps/SpringBootDemoHttpsApplication.java,SpringBootDemoHttpsApplication.java,1,    @Bean,44
+20,a989d01e45887c5debf1f797bc6fed56fed939e6,spring-boot-demo-oauth/spring-boot-demo-oauth-resource-server/src/main/java/com/xkcoding/oauth/config/OauthResourceTokenConfig.java,OauthResourceTokenConfig.java,1,    @Bean,40
+21,a989d01e45887c5debf1f797bc6fed56fed939e6,spring-boot-demo-oauth/spring-boot-demo-oauth-resource-server/src/main/java/com/xkcoding/oauth/config/OauthResourceTokenConfig.java,OauthResourceTokenConfig.java,1,    @Bean,50
+22,93a9b8b0d94e206fd8eaa5fcfadc4c88b2abd9f9,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/ClientLoginFailureHandler.java,ClientLoginFailureHandler.java,1,@Component,21
+23,93a9b8b0d94e206fd8eaa5fcfadc4c88b2abd9f9,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/ClientLogoutSuccessHandler.java,ClientLogoutSuccessHandler.java,1,@Component,20
+24,93a9b8b0d94e206fd8eaa5fcfadc4c88b2abd9f9,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/Oauth2AuthorizationTokenConfig.java,Oauth2AuthorizationTokenConfig.java,1,    @Bean,33
+25,93a9b8b0d94e206fd8eaa5fcfadc4c88b2abd9f9,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/Oauth2AuthorizationTokenConfig.java,Oauth2AuthorizationTokenConfig.java,1,    @Bean,44
+26,93a9b8b0d94e206fd8eaa5fcfadc4c88b2abd9f9,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/Oauth2AuthorizationTokenConfig.java,Oauth2AuthorizationTokenConfig.java,1,    @Bean,57
+27,93a9b8b0d94e206fd8eaa5fcfadc4c88b2abd9f9,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/Oauth2AuthorizationTokenConfig.java,Oauth2AuthorizationTokenConfig.java,1,    @Bean,70
+28,93a9b8b0d94e206fd8eaa5fcfadc4c88b2abd9f9,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/WebSecurityConfig.java,WebSecurityConfig.java,1,    @Bean,50
+29,dcfeb4f4dec08af75419aa9b8d517cc83a6c012b,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/ClientLoginFailureHandler.java,ClientLoginFailureHandler.java,1,@Component,21
+30,dcfeb4f4dec08af75419aa9b8d517cc83a6c012b,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/ClientLogoutSuccessHandler.java,ClientLogoutSuccessHandler.java,1,@Component,20
+31,dcfeb4f4dec08af75419aa9b8d517cc83a6c012b,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/Oauth2AuthorizationTokenConfig.java,Oauth2AuthorizationTokenConfig.java,1,    @Bean,33
+32,dcfeb4f4dec08af75419aa9b8d517cc83a6c012b,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/Oauth2AuthorizationTokenConfig.java,Oauth2AuthorizationTokenConfig.java,1,    @Bean,44
+33,dcfeb4f4dec08af75419aa9b8d517cc83a6c012b,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/Oauth2AuthorizationTokenConfig.java,Oauth2AuthorizationTokenConfig.java,1,    @Bean,57
+34,dcfeb4f4dec08af75419aa9b8d517cc83a6c012b,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/Oauth2AuthorizationTokenConfig.java,Oauth2AuthorizationTokenConfig.java,1,    @Bean,70
+35,dcfeb4f4dec08af75419aa9b8d517cc83a6c012b,spring-boot-demo-oauth/spring-boot-demo-oauth-authorization-server/src/main/java/com/xkcoding/oauth/config/WebSecurityConfig.java,WebSecurityConfig.java,1,    @Bean,50
+36,ddb3c50e1d2fa8f523d962d2a9b699089bf348b4,spring-boot-demo-cache-redis/README.md,README.md,5,    @Bean,155
+37,ddb3c50e1d2fa8f523d962d2a9b699089bf348b4,spring-boot-demo-cache-redis/src/main/java/com/xkcoding/cache/redis/config/RedisConfig.java,RedisConfig.java,5,    @Bean,53
+38,57100fe4ab531bd6ed7e6b493910425273439bc8,spring-boot-demo-ratelimit-redis/README.md,README.md,1,@Component,145
+39,bb84c3ac26530f45f213585e0f3fcd1f23b95b9e,spring-boot-demo-ratelimit-redis/src/main/java/com/xkcoding/ratelimit/redis/aspect/RateLimiterAspect.java,RateLimiterAspect.java,1,@Component,34
+40,bb84c3ac26530f45f213585e0f3fcd1f23b95b9e,spring-boot-demo-ratelimit-redis/src/main/java/com/xkcoding/ratelimit/redis/config/RedisConfig.java,RedisConfig.java,1,    @Bean,20
+41,adcc3040f66f5ab8586b2de8435290348f10546c,spring-boot-demo-elasticsearch-rest-high-level-client/src/main/java/com/xlcoding/elasticsearch/autoconfigure/ElasticsearchAutoConfiguration.java,ElasticsearchAutoConfiguration.java,1,    @Bean,35
+42,adcc3040f66f5ab8586b2de8435290348f10546c,spring-boot-demo-elasticsearch-rest-high-level-client/src/main/java/com/xlcoding/elasticsearch/autoconfigure/ElasticsearchProperties.java,ElasticsearchProperties.java,1,@Component,23
+43,42f46b95a93898e232033130da740a2b1da1226c,spring-boot-demo-ratelimit-guava/README.md,README.md,5,@Component,136
+44,ae4dd40327abd78ca7d9322b0047ebae685d3f3c,spring-boot-demo-ratelimit-guava/src/main/java/com/xkcoding/ratelimit/guava/aspect/RateLimiterAspect.java,RateLimiterAspect.java,1,@Component,25
+45,7f26ecb3abedb7cabcc25588c8c7fd461d9b6d23,spring-boot-demo-dynamic-datasource/README.md,README.md,1,    @Bean,107
+46,7f26ecb3abedb7cabcc25588c8c7fd461d9b6d23,spring-boot-demo-dynamic-datasource/README.md,README.md,1,"    @Bean(name = ""sqlSessionFactory"")",139
+47,7f26ecb3abedb7cabcc25588c8c7fd461d9b6d23,spring-boot-demo-dynamic-datasource/README.md,README.md,1,@Component,606
+48,97019000616ca8a64852a117c1ce008b419256e7,spring-boot-demo-social/src/main/java/com/xkcoding/social/config/justauth/JustAuthConfig.java,JustAuthConfig.java,4,    @Bean,26
+49,97019000616ca8a64852a117c1ce008b419256e7,spring-boot-demo-social/src/main/java/com/xkcoding/social/config/justauth/JustAuthConfig.java,JustAuthConfig.java,4,    @Bean,35
+50,ce4fb28c01ebe1face709f7dbb276f8a7116a5ae,spring-boot-demo-dynamic-datasource/src/main/java/com/xkcoding/dynamic/datasource/aspect/DatasourceSelectorAspect.java,DatasourceSelectorAspect.java,1,@Component,32
+51,ce4fb28c01ebe1face709f7dbb276f8a7116a5ae,spring-boot-demo-dynamic-datasource/src/main/java/com/xkcoding/dynamic/datasource/config/DatasourceConfiguration.java,DatasourceConfiguration.java,1,    @Bean,22
+52,ce4fb28c01ebe1face709f7dbb276f8a7116a5ae,spring-boot-demo-dynamic-datasource/src/main/java/com/xkcoding/dynamic/datasource/config/MybatisConfiguration.java,MybatisConfiguration.java,1,"    @Bean(name = ""sqlSessionFactory"")",30

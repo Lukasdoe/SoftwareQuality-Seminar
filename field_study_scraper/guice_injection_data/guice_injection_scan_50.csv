@@ -1,0 +1,2 @@
+,commit_hash,file_path,filename,reason,change,line
+0,282b5a79567e4e276ff4b20a5ce98a54d729466d,main/webapp/modules/core/scripts/views/data-table/data-table-view.js,data-table-view.js,bind\(.*\),  var elmts = DOM.bind(frame);,1140

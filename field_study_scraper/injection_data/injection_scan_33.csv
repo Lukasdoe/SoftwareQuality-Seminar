@@ -1,0 +1,59 @@
+,commit_hash,file_path,filename,action,change,line
+0,15577df664484c4ccccf20d401bd7aedd34e8656,web/src/main/java/com/navercorp/pinpoint/web/WebServerConfig.java,WebServerConfig.java,5,    @Bean,23
+1,8c63df6944ca5072780be3f43e79243895017139,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,5,    @Bean(FLINK_CLUSTER),44
+2,8c63df6944ca5072780be3f43e79243895017139,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,5,    @Bean(FLINK_SPAN_STAT_CLUSTER),50
+3,8c63df6944ca5072780be3f43e79243895017139,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,5,    @Bean(FLINK_CLUSTER),49
+4,8c63df6944ca5072780be3f43e79243895017139,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,5,    @Bean(FLINK_SPAN_STAT_CLUSTER),55
+5,8c63df6944ca5072780be3f43e79243895017139,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,5,    @Bean(DEFAULT_CLUSTER_ZOOKEEPER),62
+6,8c63df6944ca5072780be3f43e79243895017139,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,5,    @Bean(FLINK_CLUSTER_ZOOKEEPER),68
+7,8c63df6944ca5072780be3f43e79243895017139,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,5,    @Bean(SPAN_STAT_FLINK_CLUSTER_ZOOKEEPER),74
+8,fbb6aa3de455cbe05173a79ca1e5b0745ef18a14,collector/src/main/java/com/navercorp/pinpoint/collector/config/FlinkConfiguration.java,FlinkConfiguration.java,5,@Component,33
+9,fbb6aa3de455cbe05173a79ca1e5b0745ef18a14,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,1,    @Bean(DEFAULT_CLUSTER),38
+10,fbb6aa3de455cbe05173a79ca1e5b0745ef18a14,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,1,    @Bean(FLINK_CLUSTER),44
+11,fbb6aa3de455cbe05173a79ca1e5b0745ef18a14,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,1,    @Bean(FLINK_SPAN_STAT_CLUSTER),50
+12,fbb6aa3de455cbe05173a79ca1e5b0745ef18a14,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,1,"    @Bean(""clusterConfiguration"")",56
+13,fbb6aa3de455cbe05173a79ca1e5b0745ef18a14,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,1,"    @Bean(""flinkClusterConfiguration"")",67
+14,fbb6aa3de455cbe05173a79ca1e5b0745ef18a14,commons-server/src/main/java/com/navercorp/pinpoint/common/server/config/ClusterConfigurationFactory.java,ClusterConfigurationFactory.java,1,"    @Bean(""flinkSpanStatClusterConfiguration"")",78
+15,fbb6aa3de455cbe05173a79ca1e5b0745ef18a14,flink/src/main/java/com/navercorp/pinpoint/flink/config/FlinkConfiguration.java,FlinkConfiguration.java,5,@Component,36
+16,fbb6aa3de455cbe05173a79ca1e5b0745ef18a14,web/src/main/java/com/navercorp/pinpoint/web/config/WebClusterConfig.java,WebClusterConfig.java,3,@Component,36
+17,5da234a10f701b3115170e6698ec0635d755f4d8,web/src/main/angular/src/app/core/components/alarm-rule-list/alarm-rule-webhook-list.component.ts,alarm-rule-webhook-list.component.ts,1,@Component({,4
+18,7de407458c08b934e10e81f3249a9c9a7849afb9,web/src/main/angular/src/app/core/components/webhook-list/webhook-list-create-and-update.component.ts,webhook-list-create-and-update.component.ts,1,@Component({,21
+19,7de407458c08b934e10e81f3249a9c9a7849afb9,web/src/main/angular/src/app/core/components/webhook-list/webhook-list.component.ts,webhook-list.component.ts,1,@Component({,3
+20,1b30393b6bf7c215083da7001960743f67cabde8,web/src/main/angular/src/app/core/components/application-list/application-list-for-configuration-webhook-container.component.ts,application-list-for-configuration-webhook-container.component.ts,1,@Component({,13
+21,1b30393b6bf7c215083da7001960743f67cabde8,web/src/main/angular/src/app/core/components/configuration-webhook/configuration-webhook-container.component.ts,configuration-webhook-container.component.ts,1,@Component({,3
+22,1b30393b6bf7c215083da7001960743f67cabde8,web/src/main/angular/src/app/core/components/webhook-list/webhook-list-container.component.ts,webhook-list-container.component.ts,1,@Component({,8
+23,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,37
+24,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,43
+25,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,49
+26,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,55
+27,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,61
+28,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,67
+29,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,73
+30,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,79
+31,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,85
+32,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,91
+33,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,97
+34,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,103
+35,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,109
+36,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,115
+37,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,121
+38,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,collector/src/main/java/com/navercorp/pinpoint/collector/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,127
+39,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,37
+40,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,43
+41,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,49
+42,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,55
+43,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,61
+44,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,67
+45,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,73
+46,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,79
+47,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,85
+48,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,91
+49,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,97
+50,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,103
+51,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,109
+52,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,115
+53,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,121
+54,9a78fc502cc1a2a703f31d0d76b3ad238a34779a,web/src/main/java/com/navercorp/pinpoint/web/dao/hbase/TableDescriptorConfig.java,TableDescriptorConfig.java,4,    @Bean,127
+55,9abc582b062041bd9c8d586a5ee67b7ed35d0a26,collector/src/main/java/com/navercorp/pinpoint/collector/thrift/config/AgentBaseDataReceiverConfiguration.java,AgentBaseDataReceiverConfiguration.java,5,"    @Bean(""baseExecutorConfiguration"")",95
+56,9abc582b062041bd9c8d586a5ee67b7ed35d0a26,collector/src/main/java/com/navercorp/pinpoint/collector/thrift/config/SpanReceiverConfiguration.java,SpanReceiverConfiguration.java,5,"    @Bean(""spanExecutorConfiguration"")",166
+57,9abc582b062041bd9c8d586a5ee67b7ed35d0a26,collector/src/main/java/com/navercorp/pinpoint/collector/thrift/config/StatReceiverConfiguration.java,StatReceiverConfiguration.java,5,"    @Bean(""statExecutorConfiguration"")",165

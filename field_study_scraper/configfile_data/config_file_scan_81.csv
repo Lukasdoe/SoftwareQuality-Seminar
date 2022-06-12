@@ -1,0 +1,2 @@
+,commit_hash,file_path,filename,action,changes
+0,3a9d5148c3e0ae167736174527040abb8d7fc536,karate-archetype/src/main/resources/archetype-resources/pom.xml,pom.xml,5,"{'added': [(15, '        <karate.version>1.1.0</karate.version>')], 'deleted': [(15, '        <karate.version>1.0.1</karate.version>')]}"

@@ -1,0 +1,12 @@
+,commit_hash,file_path,filename,action,change,line
+0,069f6182abe32e2e82d3630d0256f5334df0642a,sentinel-dashboard/src/main/java/com/alibaba/csp/sentinel/dashboard/auth/AuthorizationInterceptor.java,AuthorizationInterceptor.java,5,@Component,36
+1,069f6182abe32e2e82d3630d0256f5334df0642a,sentinel-dashboard/src/main/java/com/alibaba/csp/sentinel/dashboard/auth/FakeAuthServiceImpl.java,FakeAuthServiceImpl.java,5,@Component,28
+2,069f6182abe32e2e82d3630d0256f5334df0642a,sentinel-dashboard/src/main/java/com/alibaba/csp/sentinel/dashboard/auth/LoginAuthenticationFilter.java,LoginAuthenticationFilter.java,5,@Component,52
+3,069f6182abe32e2e82d3630d0256f5334df0642a,sentinel-dashboard/src/main/java/com/alibaba/csp/sentinel/dashboard/auth/SimpleWebAuthServiceImpl.java,SimpleWebAuthServiceImpl.java,5,@Component,29
+4,069f6182abe32e2e82d3630d0256f5334df0642a,sentinel-dashboard/src/main/java/com/alibaba/csp/sentinel/dashboard/config/AuthConfiguration.java,AuthConfiguration.java,1,    @Bean,36
+5,069f6182abe32e2e82d3630d0256f5334df0642a,sentinel-dashboard/src/main/java/com/alibaba/csp/sentinel/dashboard/config/AuthConfiguration.java,AuthConfiguration.java,1,    @Bean,45
+6,069f6182abe32e2e82d3630d0256f5334df0642a,sentinel-dashboard/src/main/java/com/alibaba/csp/sentinel/dashboard/config/AuthConfiguration.java,AuthConfiguration.java,1,    @Bean,51
+7,069f6182abe32e2e82d3630d0256f5334df0642a,sentinel-dashboard/src/test/java/com/alibaba/csp/sentinel/dashboard/config/NoAuthConfigurationTest.java,NoAuthConfigurationTest.java,1,    @Bean,35
+8,8025ef593412affb0eeb88d4087c35f9849719e7,sentinel-demo/sentinel-demo-transport-spring-mvc/src/main/java/com/alibaba/csp/sentinel/demo/transport/springmvc/TransportSpringMvcDemoApplication.java,TransportSpringMvcDemoApplication.java,1,    @Bean,87
+9,8025ef593412affb0eeb88d4087c35f9849719e7,sentinel-demo/sentinel-demo-transport-spring-mvc/src/main/java/com/alibaba/csp/sentinel/demo/transport/springmvc/TransportSpringMvcDemoApplication.java,TransportSpringMvcDemoApplication.java,1,    @Bean,92
+10,113afab38055a40fa036f5377e3ccc405852df9c,sentinel-adapter/sentinel-spring-webflux-adapter/src/test/java/com/alibaba/csp/sentinel/adapter/spring/webflux/test/WebFluxTestRouter.java,WebFluxTestRouter.java,1,    @Bean,33

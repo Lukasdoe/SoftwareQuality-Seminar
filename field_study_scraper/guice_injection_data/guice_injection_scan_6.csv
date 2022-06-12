@@ -1,0 +1,5 @@
+,commit_hash,file_path,filename,reason,change,line
+0,09765b00faa88ef17c7b1b9133c8fcf7b1b5b469,client/src/main/java/com/taobao/arthas/client/TelnetConsole.java,TelnetConsole.java,bind\(.*\),"            consoleReader.getKeys().bind(new Character((char) CTRL_C).toString(), new ActionListener() {",288
+1,09765b00faa88ef17c7b1b9133c8fcf7b1b5b469,client/src/main/java/com/taobao/arthas/client/TelnetConsole.java,TelnetConsole.java,bind\(.*\),"            consoleReader.getKeys().bind(new Character(KeyMap.CTRL_D).toString(), eotEventCallback);",303
+2,09765b00faa88ef17c7b1b9133c8fcf7b1b5b469,client/src/main/java/com/taobao/arthas/client/TelnetConsole.java,TelnetConsole.java,bind\(.*\),"            consoleReader.getKeys().bind(Character.toString((char) CTRL_C), new ActionListener() {",288
+3,09765b00faa88ef17c7b1b9133c8fcf7b1b5b469,client/src/main/java/com/taobao/arthas/client/TelnetConsole.java,TelnetConsole.java,bind\(.*\),"            consoleReader.getKeys().bind(Character.toString(KeyMap.CTRL_D), eotEventCallback);",303

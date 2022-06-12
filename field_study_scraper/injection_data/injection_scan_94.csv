@@ -1,0 +1,6 @@
+,commit_hash,file_path,filename,action,change,line
+0,43fe8c1e6255d2a2156afc88f55e7fa788a5ef30,spring-cloud-netflix-eureka-server/src/test/java/org/springframework/cloud/netflix/eureka/server/doc/AbstractDocumentationTests.java,AbstractDocumentationTests.java,4,		@Bean,167
+1,1e4594655500b31d0f7232c351748515876208b7,spring-cloud-netflix-eureka-client-tls-tests/src/test/java/org/springframework/cloud/netflix/eureka/RestTemplateEurekaClientTest.java,RestTemplateEurekaClientTest.java,1,		@Bean,73
+2,1e4594655500b31d0f7232c351748515876208b7,spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/config/DiscoveryClientOptionalArgsConfiguration.java,DiscoveryClientOptionalArgsConfiguration.java,5,	@Bean,75
+3,1e4594655500b31d0f7232c351748515876208b7,spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/config/EurekaConfigServerBootstrapConfiguration.java,EurekaConfigServerBootstrapConfiguration.java,5,	@Bean,77
+4,b6ed99eb9b42c5bb5d8660f3af110b75915c2a24,spring-cloud-netflix-eureka-client/src/main/java/org/springframework/cloud/netflix/eureka/EurekaDiscoveryClientConfiguration.java,EurekaDiscoveryClientConfiguration.java,5,	@Bean,60

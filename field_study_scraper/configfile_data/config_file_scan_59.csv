@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,action,changes
+0,dc94bca03382d7e06c42fc4913ed35fe78230d83,vjkit/src/main/resources/sys_data_mask.properties,sys_data_mask.properties,1,"{'added': [(1, 'Name=chineseName,userName'), (2, 'Phone=phone,phoneNum,mobile,tel,telephone'), (3, 'IDCard=IDCard,IdNo'), (4, 'BankCard=bankCard'), (5, 'Address=address,addr'), (6, 'Email=mail,email'), (7, 'Captcha=captcha'), (8, 'Passport=passport'), (9, 'Account=account'), (10, 'Password=password,passwd'), (11, '')], 'deleted': []}"
+1,dc94bca03382d7e06c42fc4913ed35fe78230d83,vjkit/src/test/resources/data_mask.properties,data_mask.properties,1,"{'added': [(1, 'Name=nickName')], 'deleted': []}"

@@ -1,0 +1,2 @@
+,commit_hash,file_path,filename,reason,change,line
+0,48eee4486f99ccd6a265f8215484a24e8048906e,src/main/java/org/elasticsearch/plugin/nlpcn/SqlPlug.java,SqlPlug.java,bind\(.*\),                bind(NamedXContentRegistryHolder.class).asEagerSingleton();,46

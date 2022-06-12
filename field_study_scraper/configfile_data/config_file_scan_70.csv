@@ -1,0 +1,4 @@
+,commit_hash,file_path,filename,action,changes
+0,d4f1e5835b81a5e813033ba2a64a07b020c70007,client/src/main/resources/org/asynchttpclient/config/ahc-default.properties,ahc-default.properties,5,"{'added': [(55, 'org.asynchttpclient.expiredCookieEvictionDelay=30000')], 'deleted': []}"
+1,7a69311087d2c899ceff25c1e0d598afab68e146,client/src/main/resources/org/asynchttpclient/config/ahc-default.properties,ahc-default.properties,5,"{'added': [(53, 'org.asynchttpclient.hashedWheelTimerTickDuration=100'), (54, 'org.asynchttpclient.hashedWheelTimerSize=512')], 'deleted': []}"
+2,0e9ad8c2197e8ae5d03e699427a9890aee41555a,client/src/main/resources/org/asynchttpclient/config/ahc-default.properties,ahc-default.properties,5,"{'added': [(35, 'org.asynchttpclient.soKeepAlive=true')], 'deleted': []}"

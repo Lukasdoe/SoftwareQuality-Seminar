@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,action,change,line
+0,e37a7b79cbca3eb35423237a580028000038c011,zipkin-server/src/main/java/zipkin2/server/internal/cassandra/ZipkinCassandraStorageConfiguration.java,ZipkinCassandraStorageConfiguration.java,4,  @Bean SessionFactory sessionFactory() {,48
+1,e37a7b79cbca3eb35423237a580028000038c011,zipkin-server/src/main/java/zipkin2/server/internal/cassandra/ZipkinCassandraStorageConfiguration.java,ZipkinCassandraStorageConfiguration.java,4,  @Bean,52

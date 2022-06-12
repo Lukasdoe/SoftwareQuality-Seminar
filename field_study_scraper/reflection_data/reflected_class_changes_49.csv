@@ -1,0 +1,10 @@
+,commit_hash,file_path,filename,action,reflective_reference_filepath,reflective_reference_line
+0,feec867c81d1a426815717b489147894a19826e5,src/main/java/org/java_websocket/drafts/Draft_6455.java,Draft_6455.java,5,src/test/java/org/java_websocket/example/AutobahnClientTest.java,114
+1,67ff5f8ff04b78442284c17d763c4cf17d87d4ea,src/main/java/org/java_websocket/drafts/Draft_6455.java,Draft_6455.java,5,src/test/java/org/java_websocket/example/AutobahnClientTest.java,114
+2,d06cff20b6e18fd42f3b3ef154e7b9a72200f4e8,src/main/java/org/java_websocket/drafts/Draft_6455.java,Draft_6455.java,5,src/test/java/org/java_websocket/example/AutobahnClientTest.java,114
+3,9518c2a80037c90dd9a46296db89eea2dc38951f,src/main/java/org/java_websocket/drafts/Draft_6455.java,Draft_6455.java,5,src/test/java/org/java_websocket/example/AutobahnClientTest.java,114
+4,183234658cbf6ace467e5af53f03f6b0307c7a3c,src/main/java/org/java_websocket/drafts/Draft_6455.java,Draft_6455.java,5,src/test/java/org/java_websocket/example/AutobahnClientTest.java,114
+5,982dabd77d5d3d312822f83591c9b31bdd96be80,src/main/java/org/java_websocket/drafts/Draft_6455.java,Draft_6455.java,5,src/test/java/org/java_websocket/example/AutobahnClientTest.java,114
+6,982dabd77d5d3d312822f83591c9b31bdd96be80,src/test/java/org/java_websocket/drafts/Draft_6455Test.java,Draft_6455Test.java,5,src/test/java/org/java_websocket/example/AutobahnClientTest.java,114
+7,63bde93751d5424d7ca41b67df7c13a0dcfdf268,src/main/java/org/java_websocket/drafts/Draft_6455.java,Draft_6455.java,5,src/test/java/org/java_websocket/example/AutobahnClientTest.java,119
+8,63bde93751d5424d7ca41b67df7c13a0dcfdf268,src/test/java/org/java_websocket/drafts/Draft_6455Test.java,Draft_6455Test.java,5,src/test/java/org/java_websocket/example/AutobahnClientTest.java,119

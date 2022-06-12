@@ -1,0 +1,2 @@
+,commit_hash,file_path,filename,action,changes
+0,d9c090b6aca5a69c230e9d3497171e4edaa37374,src/test/resources/templates/upload.html,upload.html,5,"{'added': [], 'deleted': [(33, ""                window.location.href = '/upload/';"")]}"

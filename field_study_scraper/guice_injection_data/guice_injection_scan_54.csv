@@ -1,0 +1,5 @@
+,commit_hash,file_path,filename,reason,change,line
+0,38277c4339ed2731a58f49df5dbb6bc228882eb3,dropwizard-jersey/src/main/java/io/dropwizard/jersey/optional/OptionalParamBinder.java,OptionalParamBinder.java,bind\(.*\),        bind(OptionalParamConverterProvider.class).to(ParamConverterProvider.class).in(Singleton.class);,12
+1,38277c4339ed2731a58f49df5dbb6bc228882eb3,dropwizard-jersey/src/main/java/io/dropwizard/jersey/optional/OptionalParamBinder.java,OptionalParamBinder.java,bind\(.*\),        bind(OptionalDoubleParamConverterProvider.class).to(ParamConverterProvider.class).in(Singleton.class);,13
+2,38277c4339ed2731a58f49df5dbb6bc228882eb3,dropwizard-jersey/src/main/java/io/dropwizard/jersey/optional/OptionalParamBinder.java,OptionalParamBinder.java,bind\(.*\),        bind(OptionalIntParamConverterProvider.class).to(ParamConverterProvider.class).in(Singleton.class);,14
+3,38277c4339ed2731a58f49df5dbb6bc228882eb3,dropwizard-jersey/src/main/java/io/dropwizard/jersey/optional/OptionalParamBinder.java,OptionalParamBinder.java,bind\(.*\),        bind(OptionalLongParamConverterProvider.class).to(ParamConverterProvider.class).in(Singleton.class);,15

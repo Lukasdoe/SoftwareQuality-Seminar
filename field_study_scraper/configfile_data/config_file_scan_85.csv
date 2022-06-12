@@ -1,0 +1,2 @@
+,commit_hash,file_path,filename,action,changes
+0,611ea466d0cb10df761b39f4e1d302b27ccfe56f,src/main/resources/META-inf/native-image/joda-time/joda-time/resource-config.json,resource-config.json,1,"{'added': [(1, '{'), (2, '    ""resources"":['), (3, '      {""pattern"":""org/joda/time/tz/data/.*""}'), (4, '    ]'), (5, '}')], 'deleted': []}"

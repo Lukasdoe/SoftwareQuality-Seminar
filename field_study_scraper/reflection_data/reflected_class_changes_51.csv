@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,action,reflective_reference_filepath,reflective_reference_line
+0,0f7c464edc7c346c028eec128d0025f61321962d,src/edu/stanford/nlp/trees/ud/ProcessUniversalEnhancerRequest.java,ProcessUniversalEnhancerRequest.java,5,src/edu/stanford/nlp/trees/GrammaticalStructureConversionUtils.java,272
+1,1bcbf460b3655ce0a6371dbb7af163120351b00c,src/edu/stanford/nlp/parser/lexparser/ExhaustiveDependencyParser.java,ExhaustiveDependencyParser.java,5,src/edu/stanford/nlp/international/Language.java,88

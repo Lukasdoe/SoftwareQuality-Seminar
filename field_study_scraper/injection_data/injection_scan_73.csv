@@ -1,0 +1,62 @@
+,commit_hash,file_path,filename,action,change,line
+0,20913a5f7a262a1fc834e4b0e8ee4f7e3ffe2f77,cachecloud-web/src/main/java/com/sohu/cache/configuration/AsyncConfiguration.java,AsyncConfiguration.java,1,    @Bean,15
+1,9f3f988374248e809447d9fc31a46fc39bcab005,cachecloud-web/src/main/java/com/sohu/cache/velocity/VelocityConfiguration.java,VelocityConfiguration.java,4,"    @Bean(name = ""velocityEngine"")",61
+2,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-custom/src/main/java/com/sohu/cache/DefaultCustomConfiguration.java,DefaultCustomConfiguration.java,1,"    @Bean(""emailComponent"")",19
+3,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-custom/src/main/java/com/sohu/cache/DefaultCustomConfiguration.java,DefaultCustomConfiguration.java,1,"    @Bean(""weChatComponent"")",25
+4,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-custom/src/main/java/com/sohu/cache/DefaultCustomConfiguration.java,DefaultCustomConfiguration.java,1,"    @Bean(""loginComponent"")",31
+5,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/configuration/AppClientReportBean.java,AppClientReportBean.java,1,"    @Bean(initMethod = ""init"")",13
+6,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/inspect/impl/InstanceStateInspector.java,InstanceStateInspector.java,1,@Component,22
+7,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/log/CustLogAppenderInit.java,CustLogAppenderInit.java,1,@Component,11
+8,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/log/ErrorStatisticsAppender.java,ErrorStatisticsAppender.java,1,//@Component,12
+9,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/log/TaskFlowRecordAppender.java,TaskFlowRecordAppender.java,1,@Component,17
+10,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/redis/impl/AssistRedisServiceImpl.java,AssistRedisServiceImpl.java,1,@Component,23
+11,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/schedule/brevity/impl/BrevitySchedulerImpl.java,BrevitySchedulerImpl.java,1,@Component,31
+12,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/server/ServerStatusCollector.java,ServerStatusCollector.java,1,@Component,25
+13,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/server/nmon/NMONService.java,NMONService.java,1,@Component,19
+14,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/ssh/SSHTemplate.java,SSHTemplate.java,1,@Component,22
+15,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/swagger/Swagger2.java,Swagger2.java,1,    @Bean,17
+16,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/AppKeyAnalysisTask.java,AppKeyAnalysisTask.java,1,"@Component(""AppKeyAnalysisTask"")",27
+17,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/MachineSyncTask.java,MachineSyncTask.java,1,"@Component(""MachineSyncTask"")",28
+18,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/OffLineAppTask.java,OffLineAppTask.java,1,"@Component(""OffLineAppTask"")",33
+19,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/RedisClusterAppDeployTask.java,RedisClusterAppDeployTask.java,1,"@Component(""RedisClusterAppDeployTask"")",35
+20,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/RedisSentinelAppDeployTask.java,RedisSentinelAppDeployTask.java,1,"@Component(""RedisSentinelAppDeployTask"")",36
+21,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/RedisStandaloneAppDeployTask.java,RedisStandaloneAppDeployTask.java,1,"@Component(""RedisStandaloneAppDeployTask"")",36
+22,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/TwemproxyAppDeployTask.java,TwemproxyAppDeployTask.java,1,"@Component(""TwemproxyAppDeployTask"")",36
+23,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/analysis/RedisServerBigKeyAnalysisTask.java,RedisServerBigKeyAnalysisTask.java,1,"@Component(""RedisServerBigKeyAnalysisTask"")",35
+24,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/analysis/RedisServerIdleKeyAnalysisTask.java,RedisServerIdleKeyAnalysisTask.java,1,"@Component(""RedisServerIdleKeyAnalysisTask"")",32
+25,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/analysis/RedisServerKeyTtlAnalysisTask.java,RedisServerKeyTtlAnalysisTask.java,1,"@Component(""RedisServerKeyTtlAnalysisTask"")",31
+26,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/analysis/RedisServerKeyTypeAnalysisTask.java,RedisServerKeyTypeAnalysisTask.java,1,"@Component(""RedisServerKeyTypeAnalysisTask"")",30
+27,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/analysis/RedisServerKeyValueAnalysisTask.java,RedisServerKeyValueAnalysisTask.java,1,"@Component(""RedisServerKeyValueAnalysisTask"")",30
+28,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/daily/MachineExamTask.java,MachineExamTask.java,1,"@Component(""MachineExamTask"")",27
+29,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/daily/TopologyExamTask.java,TopologyExamTask.java,1,"@Component(""TopologyExamTask"")",38
+30,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/AppBigKeyTask.java,AppBigKeyTask.java,1,"@Component(""AppBigKeyTask"")",25
+31,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/AppDelKeyTask.java,AppDelKeyTask.java,1,"@Component(""AppDelKeyTask"")",25
+32,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/AppHotKeyTask.java,AppHotKeyTask.java,1,"@Component(""AppHotKeyTask"")",25
+33,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/AppIdleKeyTask.java,AppIdleKeyTask.java,1,"@Component(""AppIdleKeyTask"")",25
+34,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/AppScanKeyTask.java,AppScanKeyTask.java,1,"@Component(""AppScanKeyTask"")",27
+35,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/AppSlotAnalysisTask.java,AppSlotAnalysisTask.java,1,"@Component(""AppSlotAnalysisTask"")",25
+36,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/InstanceBigKeyTask.java,InstanceBigKeyTask.java,1,"@Component(""InstanceBigKeyTask"")",35
+37,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/InstanceDelKeyTask.java,InstanceDelKeyTask.java,1,"@Component(""InstanceDelKeyTask"")",32
+38,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/InstanceHotKeyTask.java,InstanceHotKeyTask.java,1,"@Component(""InstanceHotKeyTask"")",25
+39,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/InstanceIdleKeyTask.java,InstanceIdleKeyTask.java,1,"@Component(""InstanceIdleKeyTask"")",30
+40,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/InstanceScanKeyTask.java,InstanceScanKeyTask.java,1,"@Component(""InstanceScanKeyTask"")",33
+41,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/diagnosticTask/InstanceSlotAnalysisTask.java,InstanceSlotAnalysisTask.java,1,"@Component(""InstanceSlotAnalysisTask"")",34
+42,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/install/RedisSentinelInstallTask.java,RedisSentinelInstallTask.java,1,"@Component(""RedisSentinelInstallTask"")",34
+43,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/install/RedisServerInstallTask.java,RedisServerInstallTask.java,1,"@Component(""RedisServerInstallTask"")",26
+44,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/tasks/resource/PackCompileTask.java,PackCompileTask.java,1,"@Component(""PackCompileTask"")",28
+45,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/util/AppWechatUtil.java,AppWechatUtil.java,1,@Component,28
+46,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/task/util/SpringContextUtil.java,SpringContextUtil.java,1,@Component,8
+47,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/velocity/VelocityConfiguration.java,VelocityConfiguration.java,1,"    @Bean(name = ""velocityEngine"")",61
+48,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/web/service/WebClientComponent.java,WebClientComponent.java,1,@Component,15
+49,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/web/util/AppEmailUtil.java,AppEmailUtil.java,1,@Component,34
+50,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/java/com/sohu/cache/web/util/IpUtil.java,IpUtil.java,1,@Component,18
+51,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,"    @Bean(destroyMethod = ""close"")",43
+52,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,"    @Bean(destroyMethod = ""destroy"")",53
+53,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,"    @Bean(destroyMethod = ""destroy"")",63
+54,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,@Component,75
+55,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,    @Bean,152
+56,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,    @Bean,159
+57,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,"    @Bean(destroyMethod = ""shutdown"")",171
+58,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,"    @Bean(destroyMethod = ""close"")",186
+59,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,@Component,199
+60,83c9d4ffe19f72723ea782b76930c0680aa64aff,cachecloud-web/src/main/resources/static/wiki/access/client.md,client.md,1,    @Bean,240

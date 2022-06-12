@@ -1,0 +1,9 @@
+,commit_hash,file_path,filename,action,change,line
+0,d226508a570a4450f284849ba64c3910d2022e23,src/main/java/com/blade/mvc/annotation/WebSocket.java,WebSocket.java,1,@Bean,18
+1,b941bee872d855554ca39a7d6b23223651c8b809,src/test/java/netty_hello/BService.java,BService.java,5,@Bean(singleton = false),9
+2,b941bee872d855554ca39a7d6b23223651c8b809,src/test/java/netty_hello/BService.java,BService.java,5,@Bean,9
+3,b941bee872d855554ca39a7d6b23223651c8b809,src/test/java/netty_hello/UserService.java,UserService.java,5,@Bean(singleton = false),10
+4,b941bee872d855554ca39a7d6b23223651c8b809,src/test/java/netty_hello/UserService.java,UserService.java,5,@Bean,10
+5,7abecc2ff19c97823dde679e5e0d89581bd21832,src/test/java/netty_hello/BService.java,BService.java,1,@Bean(singleton = false),9
+6,7abecc2ff19c97823dde679e5e0d89581bd21832,src/test/java/netty_hello/CService.java,CService.java,1,@Bean,9
+7,7abecc2ff19c97823dde679e5e0d89581bd21832,src/test/java/netty_hello/UserService.java,UserService.java,1,@Bean(singleton = false),10

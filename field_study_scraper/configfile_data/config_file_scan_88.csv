@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,action,changes
+0,743b285b91eabb6591c79fd5b54f29c2c8789a2e,byte-buddy/src/main/resources/META-INF/native-image/net.bytebuddy/byte-buddy/native-image.properties,native-image.properties,1,"{'added': [(1, 'Args = --initialize-at-build-time=net.bytebuddy')], 'deleted': []}"
+1,a079db9e6e2ff96136e5f62b70c90a6984561b5c,byte-buddy-maven-plugin/src/main/resources/META-INF/m2e/lifecycle-mapping-metadata.xml,lifecycle-mapping-metadata.xml,5,"{'added': [(7, '          <goal>transform-runtime</goal>')], 'deleted': []}"

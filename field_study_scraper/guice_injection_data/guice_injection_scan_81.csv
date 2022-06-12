@@ -1,0 +1,3 @@
+,commit_hash,file_path,filename,reason,change,line
+0,e6facece4a57561691e32d73b52ccd9e9f238c35,karate-demo/src/test/java/mock/contract/QueueConsumer.java,QueueConsumer.java,bind\(.*\),    public void bind(EventContext context) {,51
+1,e6facece4a57561691e32d73b52ccd9e9f238c35,karate-demo/src/test/java/mock/contract/payment-service.feature,payment-service.feature,bind\(.*\),# * queue.bind(karate),8

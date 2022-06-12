@@ -1,0 +1,5 @@
+,commit_hash,file_path,filename,reason,change,line
+0,538890e8c0a8178913030d80af306707ce67cb67,moshi/src/main/java/com/squareup/moshi/AdapterMethodsFactory.java,AdapterMethodsFactory.java,bind\(.*\),"        @Override public void bind(Moshi moshi, JsonAdapter.Factory factory) {",178
+1,538890e8c0a8178913030d80af306707ce67cb67,moshi/src/main/java/com/squareup/moshi/AdapterMethodsFactory.java,AdapterMethodsFactory.java,bind\(.*\),"        @Override public void bind(Moshi moshi, JsonAdapter.Factory factory) {",246
+2,538890e8c0a8178913030d80af306707ce67cb67,moshi/src/main/java/com/squareup/moshi/AdapterMethodsFactory.java,AdapterMethodsFactory.java,bind\(.*\),"        public void bind(Moshi moshi, JsonAdapter.Factory factory) {",208
+3,538890e8c0a8178913030d80af306707ce67cb67,moshi/src/main/java/com/squareup/moshi/AdapterMethodsFactory.java,AdapterMethodsFactory.java,bind\(.*\),"        public void bind(Moshi moshi, JsonAdapter.Factory factory) {",283

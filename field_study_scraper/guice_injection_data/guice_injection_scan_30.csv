@@ -1,0 +1,2 @@
+,commit_hash,file_path,filename,reason,change,line
+0,0ba1edb60007732738212d07765351c3f0d5dd32,lab-67/lab-67-netty-demo/lab-67-netty-demo-server/src/main/java/cn/iocoder/springboot/lab67/nettyserverdemo/server/NettyServer.java,NettyServer.java,bind\(.*\),        ChannelFuture future = bootstrap.bind().sync();,59
