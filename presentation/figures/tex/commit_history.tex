@@ -1,0 +1,25 @@
+\documentclass[border=2mm]{standalone}
+\usepackage{tikz}
+\usepackage{pgfcalendar}    % <-- to convert the dates to Julian integers
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}  % <-- to manipulate the data file/table
+\setlength{\textwidth}{12.2cm}
+\setlength{\textheight}{19.3cm}
+\usetikzlibrary{
+    pgfplots.dateplot,
+}
+\pgfplotsset{compat=1.17}
+
+\begin{document}
+\begin{tikzpicture}[
+        % /pgfplots/scale only axis,
+        % /pgfplots/width=0.7\linewidth, %6cm,
+        % /pgfplots/height=0.7\linewidth %6cm
+    ]
+    \begin{axis}[
+        date coordinates in=x
+        ]
+        \addplot [only marks, mark size=0.2] table [col sep=comma,trim cells=true,y=value] {./commit_result.data};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

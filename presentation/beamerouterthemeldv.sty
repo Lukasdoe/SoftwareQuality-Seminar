@@ -1,0 +1,54 @@
+\mode<presentation>
+
+\setbeamercolor{frametitle}{parent=palette primary}
+
+\AtBeginDocument{
+  {
+    \usebeamerfont*{headline}
+
+    \usebeamercolor{normal text}
+    \usebeamercolor{title in head/foot}
+    \usebeamercolor{subsection in head/foot}
+    \usebeamercolor{section in head/foot}
+    \usebeamercolor{frametitle}
+
+    
+    \pgfdeclareverticalshading{beamer@aboveframetitle}{\the\paperwidth}{%
+      color(0ex)=(frametitle.bg);%
+      color(0ex)=(frametitle.bg);%
+      color(0ex)=(subsection in head/foot.bg)
+    }
+
+    \pgfdeclareverticalshading{beamer@belowframetitle}{\the\paperwidth}{%
+      color(0ex)=(normal text.bg);%
+      color(0ex)=(frametitle.bg)
+    }
+  }
+}
+
+\defbeamertemplate*{headline}{ldv}
+{%
+% Box on top of each slide
+%Logo der Uni:
+    \vspace{0.15cm}
+    \begin{tabularx}{\paperwidth}[t]{lXr}
+	% \includegraphics[scale=0.15]{ldvlogo_neu}
+        & & \includegraphics[scale=0.45]{tumlogo}
+    \end{tabularx}
+    \parbox{\paperwidth}{\vspace{0.7mm}%
+\textcolor{beamer@blendedblue}{\line(1,0){\textwidth}}} % Obere (blaue, dünne) Linie
+  }
+
+\defbeamertemplate*{footline}{ldv}
+  {%
+    \hbox{%
+\textcolor{beamer@blendedblue}{\line(1,0){\textwidth}}} % Obere (blaue, dünne) Linie
+\vspace{2pt}
+\textcolor{beamer@blendedblue}{
+      \hspace{1em}\zwischentitel\ \ $\vert$\ \ \leitthema\ \ $\vert$\ \ \presdatum
+      \hfill \slidenomenclature \ \insertframenumber\ of\ \inserttotalframenumber\hspace{1em}
+  }
+%\vspace{2pt}
+  }
+\mode
+<all>
