@@ -1,0 +1,12 @@
+**/target/
+**/.ekstazi/
+**/.clover/
+**/hyrts-files/
+**/.starts/
+
+**/.settings
+**/.project
+**/.classpath
+
+/.idea
+/.vscode

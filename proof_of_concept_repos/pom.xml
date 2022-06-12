@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>ProofOfConceptRepos</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Multi-module configuration inspired by https://github.com/delsner/mvn-multimodule-example/blob/master/pom.xml -->
+    <modules>
+        <module>ConfigurationFiles</module>
+        <module>ClassLoaderMonitoring</module>
+        <module>DynamicDispatch</module>
+        <module>ProfilingProblems</module>
+        <module>Reflections</module>
+        <module>DependencyInjectionSBC</module>
+        <module>DependencyInjectionComponentScan</module>
+        <module>CollectionInjection</module>
+        <module>DependencyConfigFiles</module>
+        <module>DependencyInjectionSource</module>
+        <module>DependencyInjectionSourceGuice</module>
+        <module>DependencyInjectionGuiceProvides</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Required to enable GIB-stazi using a maven profile,
+        inspired by https://stackoverflow.com/questions/17639778/maven-3-profile-with-extensions -->
+        <gibstazi.placeholder.groupId>org.apache.maven.plugins</gibstazi.placeholder.groupId>
+        <gibstazi.placeholder.artifactId>maven-compiler-plugin</gibstazi.placeholder.artifactId>
+        <gibstazi.placeholder.version>3.8.1</gibstazi.placeholder.version>
+
+        <!-- enforce the minimum required java version for all RTS methods for consistency -->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-api</artifactId>
+                <version>5.8.1</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.ekstazi</groupId>
+                    <artifactId>ekstazi-maven-plugin</artifactId>
+                    <version>5.3.0-custom</version>
+                    <configuration>
+                        <forcefailing>true</forcefailing>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>ekstazi</id>
+                            <goals>
+                                <goal>select</goal>
+                                <goal>restore</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>edu.illinois</groupId>
+                    <artifactId>starts-maven-plugin</artifactId>
+                    <version>1.4-SNAPSHOT</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.hyrts</groupId>
+                    <artifactId>hyrts-maven-plugin</artifactId>
+                    <version>1.0.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.openclover</groupId>
+                    <artifactId>clover-maven-plugin</artifactId>
+                    <version>4.4.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <filesets>
+                        <fileset>
+                            <directory>./</directory>
+                            <includes>
+                                <include>**/target/</include>
+                                <include>**/.ekstazi/</include>
+                                <include>**/.clover/</include>
+                                <include>**/.starts/</include>
+                                <include>**/hyrts-files/</include>
+                            </includes>
+                            <followSymlinks>true</followSymlinks>
+                        </fileset>
+                    </filesets>
+                </configuration>
+            </plugin>
+        </plugins>
+        <extensions>
+            <extension>
+                <groupId>${gibstazi.placeholder.groupId}</groupId>
+                <artifactId>${gibstazi.placeholder.artifactId}</artifactId>
+                <version>${gibstazi.placeholder.version}</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>OpenClover</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <!-- source: https://openclover.org/doc/manual/latest/maven[-]-using-examplePackage-optimization.html -->
+                        <groupId>org.openclover</groupId>
+                        <artifactId>clover-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>setup</goal>
+                                    <goal>optimize</goal>
+                                    <goal>snapshot</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>GIBstazi</id>
+            <properties>
+                <gibstazi.placeholder.groupId>edu.illinois</gibstazi.placeholder.groupId>
+                <gibstazi.placeholder.artifactId>incremental-builder-with-ekstazi</gibstazi.placeholder.artifactId>
+                <gibstazi.placeholder.version>3.5.7</gibstazi.placeholder.version>
+
+                <!-- below are the possible settings, taken from https://github.com/august782/gitflow-incremental-builder/blob/master/README.md :
+                (we use the default settings for every commented property)
+
+                <gib.enabled>true</gib.enabled>
+                <gib.repositorySshKey></gib.repositorySshKey> -->
+                <gib.referenceBranch>refs/heads/main</gib.referenceBranch>
+                <!-- <gib.referenceCommit></gib.referenceCommit>
+                <gib.commitRange>DEFAULT</gib.commitRange>
+                <gib.baseBranch>HEAD</gib.baseBranch>
+                <gib.baseCommit></gib.baseCommit>
+                <gib.uncommited>true</gib.uncommited>
+                <gib.makeUpstream>false</gib.makeUpstream>
+                <gib.skipTestsForNotImpactedModules>false</gib.skipTestsForNotImpactedModules>
+                <gib.buildAll>false</gib.buildAll>
+                <gib.compareToMergeBase>true</gib.compareToMergeBase>
+                <gib.fetchBaseBranch>false</gib.fetchBaseBranch>
+                <gib.fetchReferenceBranch>false</gib.fetchReferenceBranch>
+                <gib.excludePathRegex>(?!x)x</gib.excludePathRegex>
+                <gib.failOnMissingGitDir>true</gib.failOnMissingGitDir>
+                <gib.failOnError>true</gib.failOnError> -->
+
+                <!-- The settings below are undocumented settings, unique to GIBstazi -->
+                <gib.useEkstazi>true</gib.useEkstazi>  <!-- this is set to "false" by default -->
+                <!-- <gib.classpathFile></gib.classpathFile>
+                <gib.skippedModulesFile></gib.skippedModulesFile>
+                <gib.classpathFile>./target/classpaths.txt</gib.classpathFile> -->
+            </properties>
+        </profile>
+        <profile>
+            <id>HyRTS</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.hyrts</groupId>
+                        <artifactId>hyrts-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>STARTS</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>edu.illinois</groupId>
+                        <artifactId>starts-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>EKSTAZI</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.ekstazi</groupId>
+                        <artifactId>ekstazi-maven-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-surefire-plugin</artifactId>
+                        <configuration>
+                            <excludesFile>${java.io.tmpdir}/${user.name}EkstaziExcludes</excludesFile>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>JUnit5</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.junit.jupiter</groupId>
+                    <artifactId>junit-jupiter-api</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>JUnit4 (latest)</id>
+            <dependencies>
+                <dependency>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                    <version>4.13.2</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>JUnit4.10</id>
+            <dependencies>
+                <dependency>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                    <version>4.10</version>
+                </dependency>
+            </dependencies>
+        </profile>
+        <profile>
+            <id>JUnit3</id>
+            <dependencies>
+                <dependency>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                    <version>3.8.2</version>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+</project>
